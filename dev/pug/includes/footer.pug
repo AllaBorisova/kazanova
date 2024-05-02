@@ -1,0 +1,117 @@
+footer.footer
+	.container
+			.footer__top 
+				.footer__inner 
+					.footer__column 
+						a.logo(href="index.html")
+							img(src="./img/logo.svg" alt="")
+						.footer__info
+							a.footer__phone(href="tel:+7 495 984-77-78") +7 495 984-77-78
+							a.footer__order-link(href="") заказать звонок
+						.footer__info
+							a.footer__email(href="mailto:info@kazanova-textil.ru") info@kazanova-textil.ru
+							a.footer__order-link(href="") заказать звонок
+					.footer__column 
+						.footer-menu 
+							.footer-menu__column 
+								.footer-menu__caption Продукция
+								.footer-menu__list
+									+list-links('Постельное белье','Пледы','Покрывала','Подушки','Одеяла','Детям','Махровые изделия','Столовый текстиль','Аксессуары')
+							.footer-menu__column 
+								.footer-menu__caption О компании
+								.footer-menu__list
+									+list-links('События','Наши магазины','Контакты','Условия возврата','Публичная оферта')
+							.footer-menu__column 
+								.footer-menu__caption Розничным покупателям
+								.footer-menu__list
+									+list-links('Как купить','Скидки и акции','Бонусная программа','Подарочные сертификаты','Оплата и доставка')
+							.footer-menu__column 
+								.footer-menu__caption Оптовым покупателям
+								.footer-menu__list
+									+list-links('Условия сотрудничества','Дропшиппинг','Способ доставки','XML/CSV-выгрузка для интернет-магазинов')
+					.footer__column 
+						.footer__socials мы в соцсетях
+						.socials 
+							a(href="")
+								img(src="./img/youtube.svg" alt="")
+							a(href="")
+								img(src="./img/vk.svg" alt="")
+							a(href="")
+								img(src="./img/ok.svg" alt="")
+			.footer__bottom 
+				.footer__copyright © 2022 kazanov.a. Все права защищены
+				.footer__links 
+					a(href="") Политика конфиденциальности
+					a(href="") Пользовательское соглашение
+		
+			//- .footer__left 
+			//- 	a.footer__phone(href="tel:8 (383) 319-54-64") 8 (383) 319-54-64
+			//- 	a.footer__link(href="") Правила акции
+			//- 	a.footer__link(href="") Победители
+			//- 	a.footer__link(href="") Призы
+			//- .footer__right БИНГРЭ.РФ © 2024
+#login-popup.popup 
+	.popup-tabs.tabs
+		ul
+			li Покупатель
+			li Оптовый покупатель
+		div
+			div 
+				.login-form 
+					.login-form__title Вход в Личный кабинет
+					form.form(action="") 
+						.form__block
+							label.form__label Номер телефона
+							input.form__input.input-tel(type="tel" placeholder="+7")
+							.form__small-text на указанный номер поступит СМС с кодом доступа
+						button.button.button_full(type="submit") Получить код
+			div
+				.login-form 
+					.login-form__title Вход в Личный кабинет оптового покупателя
+					.form__small-text Ожидайте СМС на номер телефона, если СМС не поступит в течение двух минут, вы сможете заказать код повторно
+					form.form(action="") 
+						.form__block
+							label.form__label Номер телефона
+							input.form__input(type="text" placeholder="Код")
+						.form__block
+							+custom-checkbox-agree('Согласен с политикой обработки персональных данных')
+						button.button.button_full(type="submit") Зарегистрироваться
+
+//- #about-popup.white-popup.mfp-hide
+//- 	.popup 
+//- 		.popup__columns
+//- 			.popup__column-left
+//- 				.popup__logo
+//- 					img(src="./img/popup-logo.png" alt="")
+//- 				.popup__grey-block 100% акций принадлежат Фонду «Жилищное и социальное строительство Калининградской области»
+//- 			.popup__column
+//- 				.popup__title Общество с ограниченной ответственностью Специализированный застройщик «535-СТРОЙ»
+//- 				.popup__text 
+//- 					p С сентября 2003 года Фонд является региональным оператором АО «Агентство по ипотечному жилищному кредитованию» (с 2018г. — ДОМ.РФ). С 2004 года Фонд активно участвует в формировании долгосрочного ипотечного жилищного кредитования в Калининградской области. Свыше 4000 Калининградских семей воспользовались ипотечными продуктами с помощью Фонда «ЖСС КО» и улучшили свои жилищные условия.
+//- 					p Как застройщик Фонд «ЖСС КО» осуществил строительство 17 многоквартирных жилых домов общей жилой площадь более 70 000 кв.м. в Калининграде и городах области: Гурьевске, Светлогорске, Балтийске, Пионерском, Мамоново, Светлом, Гвардейске, Правдинске. Кроме того, по поручению Правительства Калининградской области Фонд в период с 2009 занимается реализацией регионального механизма поддержки застройщиков, завершению строительства объектов, признанных проблемными, и решению вопросов по обеспечению жильём обманутых дольщиков, выполняя функции инвестора и технического заказчика.
+//- #order-popup.white-popup.mfp-hide
+	.popup 
+		.popup__title Заказать
+		.popup__text Наш специалист свяжется с вами в ближайшее время.
+		.popup__form
+			form.form
+				.form__input-block
+					input.form__input(type="text" value="" name="")
+					label.form__label ФИО *
+				.form__input-block
+					input.form__input(type="tel" value="" name="")
+					label.form__label Телефон *
+				.form__input-block
+					input.form__input(type="email" value="" name="")
+					label.form__label Email *
+				.form__input-block
+					input.form__input(type="text" value="" name="")
+					label.form__label “Телятина и баранина» кусочки мяса в соусе”
+				.form__textarea-block
+					textarea.form__textarea
+					label.form__label Комментарий
+				.form__agree
+					+custom-checkbox-agree('Я прочитал и принимаю условия Политики конфиденциальности и Правил обработки персональных данных')
+				button.button.button_full.form__submit.open-popup-link(type="submit" data-mfp-src="#thanks-popup") ЗАКАЗАТЬ
+
+

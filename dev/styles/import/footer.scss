@@ -1,0 +1,142 @@
+.socials {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.footer {
+  position: relative;
+  background: #1f1f1f;
+  margin-top: 10rem;
+  @media (max-width: $breakpoint-mobile) {
+    // padding: 2.4rem 0;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  &__column {
+    .logo {
+      margin-bottom: 5.8rem;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+  }
+  &__socials {
+    font-weight: 400;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    color: #f2f2f2;
+    font-family: $font-second;
+    margin-bottom: 0.9rem;
+  }
+  &__phone,
+  &__email {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 111%;
+    color: #f2f2f2;
+    display: block;
+    font-family: $font-third;
+  }
+  &__order-link {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 128%;
+    color: #fff;
+    display: block;
+    font-family: $font-third;
+    @include tr;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__top {
+    padding-top: 5rem;
+    padding-bottom: 4.5rem;
+  }
+  &__bottom {
+    padding-top: 2.6rem;
+    padding-bottom: 3.2rem;
+    border-top: 1px solid #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__copyright {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 125%;
+    color: #f2f2f2;
+    opacity: 0.9;
+    font-family: $font-third;
+  }
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.6rem;
+    a {
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 143%;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      color: #f2f2f2;
+      opacity: 0.6;
+      @include tr;
+      font-family: $font-third;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  &-menu {
+    display: flex;
+    align-items: flex-start;
+    gap: 6.6rem;
+    @media (max-width: 1440px) {
+      gap: 4rem;
+    }
+    &__column {
+      max-width: 27.8rem;
+    }
+    &__caption {
+      font-weight: 400;
+      font-size: 2.4rem;
+      line-height: 100%;
+      color: #f2f2f2;
+      font-family: $font-second;
+      margin-bottom: 1.4rem;
+    }
+    &__list {
+      ul {
+        @include ul-clean;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        li {
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 111%;
+          color: #f2f2f2;
+
+          a {
+            text-decoration: none;
+            @include tr;
+            font-family: $font-third;
+            opacity: 0.9;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
