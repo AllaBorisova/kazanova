@@ -4,27 +4,22 @@
 }
 .hamburger {
   @include wh(4rem);
-  // border-radius: 0.5rem;
-  // background: linear-gradient(90deg, #da2b15 0%, #fcc505 100%);
   @include flexcc;
-  // display: none;
   flex: none;
   background: none;
   @media (max-width: $breakpoint-tablet) {
-    display: flex;
-    margin-left: auto;
+    @include wh(2rem);
   }
   &:hover,
   &:active,
   &:focus {
-    // background: linear-gradient(90deg, #da2b15 0%, #fcc505 100%);
   }
   &__button {
     cursor: pointer;
     background: none;
     padding: 0;
     position: relative;
-    z-index: 999;
+    z-index: 9;
     width: 2rem;
     height: 1.9rem;
     flex: none;
@@ -71,10 +66,13 @@
     }
   }
 }
+
 .logo {
   display: block;
   position: relative;
   max-width: 18.5rem;
+  margin-left: auto;
+  margin-right: auto;
   // max-width: 18rem;
   // margin-right: 4.5rem;
   img {
@@ -95,19 +93,25 @@
   .open-menu & {
     background: #fff;
   }
-  // margin-bottom: 2rem;
-  // background: #1f1f1f;
 
   @media (max-width: $breakpoint-mobile) {
-    // padding-top: 1.6rem;
-    // padding-bottom: 1.6rem;
-    // margin-bottom: 0;
+    .logo {
+      width: 10rem;
+      flex: none;
+      order: 3;
+      .open-menu & img {
+        filter: brightness(0) saturate(100%);
+      }
+    }
   }
   &-top {
     height: 5rem;
     overflow: hidden;
     position: relative;
     z-index: 2;
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -120,13 +124,20 @@
     display: flex;
     align-items: center;
     position: relative;
-    justify-content: space-between;
+    // justify-content: space-between;
+    gap: 1.5rem;
     @media (max-width: $breakpoint-tablet) {
-      justify-content: flex-start;
+      // justify-content: flex-start;
       gap: 1rem;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      gap: 0;
     }
   }
   &__login-link {
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
     .open-menu & {
       svg path {
         stroke: #1f1f1f;
@@ -134,6 +145,9 @@
     }
   }
   &__favorite-link {
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
     .open-menu & {
       svg path {
         stroke: #1f1f1f;
@@ -150,25 +164,45 @@
     align-items: center;
     height: 4rem;
     font-family: $font-first;
+    text-align: center;
     @include tr;
     .open-menu & {
       border: 1px solid #1f1f1f;
       color: #1f1f1f;
       background: #fff;
     }
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 1.2rem;
+      line-height: 95%;
+      padding: 0rem;
+      font-weight: 400;
+      width: 9rem;
+      order: 2;
+      margin-left: 0.5rem;
+    }
   }
   &__left {
     gap: 1.5rem;
     display: flex;
     align-items: center;
+    @media (max-width: $breakpoint-mobile) {
+      gap: 0rem;
+    }
   }
   &__right {
     gap: 1.5rem;
     display: flex;
     align-items: center;
+    @media (max-width: $breakpoint-mobile) {
+      gap: 0rem;
+    }
   }
   &-search {
     position: relative;
+    @media (max-width: $breakpoint-mobile) {
+      order: 5;
+      position: static;
+    }
     &__form {
       position: relative;
       width: 4rem;
@@ -176,6 +210,13 @@
       @include tr;
       .header-search.search-active & {
         width: 45.2rem;
+        @media (max-width: $breakpoint-mobile) {
+          width: 100vw;
+          position: absolute;
+          right: -1.5rem;
+          top: 0;
+          z-index: 10;
+        }
       }
     }
     &__input {
@@ -191,6 +232,9 @@
       display: none;
       position: relative;
       z-index: 1;
+      @media (max-width: $breakpoint-mobile) {
+        border-radius: 0;
+      }
       .header-search.search-active & {
         display: block;
       }
@@ -211,6 +255,13 @@
       @include tr;
       background: none;
       z-index: 2;
+      @media (max-width: $breakpoint-mobile) {
+        border: none;
+        svg {
+          max-width: 2rem;
+          max-height: 2rem;
+        }
+      }
       .header-search.search-active & {
         border: none;
         background: #fff;
@@ -233,6 +284,11 @@
       border-top: 1px solid #d9d9d9;
       padding: 2rem;
       display: none;
+      @media (max-width: $breakpoint-mobile) {
+        right: -1.5rem;
+        width: 100vw;
+        top: 4rem;
+      }
       .header-search.show-results & {
         display: block;
       }
@@ -245,8 +301,11 @@
       margin-bottom: 2rem;
       max-height: 36.7rem;
       overflow-y: scroll;
+      padding-right: 0.5rem;
       @media (max-width: $breakpoint-mobile) {
         max-height: 24rem;
+        margin-bottom: 1.5rem;
+        gap: 1.5rem;
       }
       &::-webkit-scrollbar {
         width: 0.5rem;
@@ -263,6 +322,9 @@
       display: flex;
       gap: 1.6rem;
       align-items: flex-start;
+      @media (max-width: $breakpoint-mobile) {
+        gap: 1.5rem;
+      }
     }
     &__img {
       @include wh(7.7rem);
@@ -285,6 +347,9 @@
       font-family: $font-second;
       display: block;
       margin-bottom: 1.7rem;
+      @media (max-width: $breakpoint-mobile) {
+        margin-bottom: 0;
+      }
     }
     &__price {
       font-weight: 400;
@@ -295,6 +360,9 @@
     }
   }
   &-cart {
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
     position: relative;
     &__icon {
       border-radius: 50%;
@@ -418,6 +486,10 @@
   }
   &-pin {
     position: relative;
+    @media (max-width: $breakpoint-mobile) {
+      order: 4;
+      position: static;
+    }
     &__icon {
       border-radius: 50%;
       @include tr;
@@ -427,6 +499,13 @@
       .open-menu & {
         svg path {
           stroke: #1f1f1f;
+        }
+      }
+      @media (max-width: $breakpoint-mobile) {
+        @include wh(3.2rem);
+        svg {
+          max-width: 2rem;
+          max-height: 2rem;
         }
       }
     }
@@ -450,6 +529,13 @@
       // display: none;
       left: -1.4rem;
       top: 6.6rem;
+      @media (max-width: $breakpoint-mobile) {
+        left: auto;
+        right: -1.5rem;
+        width: 100vw;
+        padding: 1.5rem;
+        gap: 1.5rem;
+      }
       &:before {
         content: '';
         border-bottom: 2rem solid #fff;
@@ -458,6 +544,10 @@
         position: absolute;
         top: -2rem;
         left: 1.4rem;
+        @media (max-width: $breakpoint-mobile) {
+          left: auto;
+          right: 8.4rem;
+        }
       }
       .header-pin:not(.active) & {
         display: none;
@@ -483,6 +573,9 @@
       font-weight: 400;
       font-size: 1.6rem;
       color: #1f1f1f;
+      @media (max-width: $breakpoint-mobile) {
+        padding-left: 1rem;
+      }
     }
     &__button {
       width: 3.9rem;
@@ -506,7 +599,9 @@
   }
   &-phone {
     position: relative;
-
+    @media (max-width: $breakpoint-mobile) {
+      order: 6;
+    }
     &__icon {
       border-radius: 50%;
       @include tr;
@@ -516,6 +611,13 @@
       .open-menu & {
         svg path {
           stroke: #1f1f1f;
+        }
+      }
+      @media (max-width: $breakpoint-mobile) {
+        @include wh(3.2rem);
+        svg {
+          max-width: 2rem;
+          max-height: 2rem;
         }
       }
     }
@@ -539,6 +641,11 @@
 
       left: -1.4rem;
       top: 6.6rem;
+      @media (max-width: $breakpoint-mobile) {
+        left: auto;
+        right: -1.4rem;
+        gap: 2rem;
+      }
       &:before {
         content: '';
         border-bottom: 2rem solid #fff;
@@ -547,6 +654,10 @@
         position: absolute;
         top: -2rem;
         left: 1.4rem;
+        @media (max-width: $breakpoint-mobile) {
+          left: auto;
+          right: 1rem;
+        }
       }
       .header-phone:not(.active) & {
         display: none;
@@ -627,14 +738,7 @@
     }
   }
 }
-// .header-popup {
-//   position: absolute;
-//   z-index: 99;
-//   padding: 2rem;
-//   background: #fff;
-//   top: 0;
-//   left: 0;
-// }
+
 .header-popup {
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.29), 0 13px 13px 0 rgba(0, 0, 0, 0.26),
     0 28px 17px 0 rgba(0, 0, 0, 0.15), 0 50px 20px 0 rgba(0, 0, 0, 0.04),
@@ -651,6 +755,10 @@
   // left: -100vw;
   margin: auto;
   z-index: 999;
+  @media (max-width: $breakpoint-mobile) {
+    top: 7rem;
+    min-height: calc(100vh - 7rem);
+  }
   @include tr;
 
   .open-menu & {
@@ -660,30 +768,68 @@
   &__inner {
     display: grid;
     grid-template-columns: 21% auto 41%;
+    @media (max-width: $breakpoint-mobile) {
+      grid-template-columns: 1fr;
+    }
   }
   &__column {
     &:nth-child(1) {
       padding: 5rem 4rem;
+      @media (max-width: $breakpoint-mobile) {
+        padding: 0rem 1.5rem;
+      }
     }
     &:nth-child(2) {
       border-left: 1px solid #b5b3b3;
       border-right: 1px solid #b5b3b3;
       padding: 5rem;
+      @media (max-width: $breakpoint-mobile) {
+        display: none;
+      }
     }
     &:nth-child(3) {
       padding: 5rem 4rem;
+      @media (max-width: $breakpoint-mobile) {
+        padding: 0rem 1.5rem;
+      }
     }
   }
   &__columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 7rem;
+    column-gap: 1rem;
+    @media (max-width: $breakpoint-mobile) {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
   }
   &__title {
     font-weight: 400;
     font-size: 2.4rem;
     font-family: $font-second;
     margin-bottom: 2rem;
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 2rem;
+      margin-bottom: 0rem;
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        width: 2.4rem;
+        height: 2.4rem;
+        background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="%231F1F1F" stroke-width="0.5" /><path d="M15 13.5L12 10.5L9 13.5" stroke="%231F1F1F" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" /></svg>');
+        @include bg-img;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include tr;
+        transform: rotate(180deg);
+        .open-list & {
+          transform: rotate(0deg);
+        }
+      }
+    }
   }
   &__photo {
     height: 50rem;
@@ -696,6 +842,22 @@
     }
   }
   &__list {
+    @media (max-width: $breakpoint-mobile) {
+      padding: 1rem 0;
+      border-bottom: 1px solid #b5b3b3;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      .header-popup__lvl1 {
+        display: none;
+      }
+      &.open-list .header-popup__lvl1 {
+        display: flex;
+      }
+      .header-popup__lvl1 {
+        padding-top: 1rem;
+      }
+    }
+
     ul {
       @include ul-clean;
       display: flex;
@@ -705,6 +867,12 @@
       line-height: 1;
       color: #1f1f1f;
       gap: 2rem;
+
+      @media (max-width: $breakpoint-mobile) {
+        font-size: 1.4rem;
+        gap: 1rem;
+        font-weight: 500;
+      }
       li {
         a {
           opacity: 0.9;
@@ -719,6 +887,11 @@
           font-size: 1.4rem;
           line-height: 130%;
           margin-top: 2rem;
+          @media (max-width: $breakpoint-mobile) {
+            margin-top: 0rem;
+            padding-top: 1rem;
+            gap: 0.8rem;
+          }
           li {
             a {
               color: rgba(31, 31, 31, 0.7);
@@ -757,10 +930,75 @@
   gap: 2rem;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   a {
     @include tr;
     &:hover {
       opacity: 0.7;
+    }
+  }
+}
+.header-mobile {
+  display: none;
+  @media (max-width: $breakpoint-mobile) {
+    height: 6.4rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+    width: 100%;
+    background: #fff;
+    padding: 0 1.5rem;
+    // gap: 3rem;
+    .header__login-icon,
+    .header__favorite-icon,
+    .header-cart__icon {
+      width: 2rem;
+      height: 2rem;
+      svg {
+        max-width: 2rem;
+        max-height: 2rem;
+      }
+    }
+    .header__login-link,
+    .header__favorite-link,
+    .header-cart-link,
+    .header__menu-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .header__login-text,
+    .header__favorite-text,
+    .header__cart-text,
+    .header__menu-text {
+      font-size: 1.2rem;
+      color: #1f1f1f;
+      text-align: center;
+    }
+    .hamburger {
+      @include wh(2rem);
+    }
+    .hamburger__button span {
+      background: #1f1f1f;
+    }
+    .hamburger__button span:nth-child(2) {
+      top: 0.6rem;
+      left: 0.3rem;
+    }
+    .hamburger__button span:nth-child(3) {
+      top: 1.2rem;
+    }
+    .logo {
+      margin-left: 0;
+      margin-right: 0;
+      flex: none;
+      width: auto;
+      order: 0;
     }
   }
 }

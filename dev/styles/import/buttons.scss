@@ -1,7 +1,7 @@
 .button {
   cursor: pointer;
   white-space: nowrap;
-  border: 1px solid #000;
+  border: 2px solid #1f1f1f;
   text-decoration: none;
   display: inline-flex;
   justify-content: center;
@@ -12,13 +12,14 @@
   border-radius: 0rem;
   font-weight: 400;
   font-size: 1.6rem;
-  color: #000;
+  color: #1f1f1f;
   @include tr;
   background: #fff;
   @media (max-width: $breakpoint-mobile) {
     width: 100%;
-    padding: 1.5rem;
+    padding: 0 1.5rem;
     max-width: 100%;
+    height: 4rem;
   }
   &:disabled {
     background: #d3d3d3;
@@ -26,16 +27,16 @@
     color: #989898;
   }
   &:hover {
-    background: #000;
+    background: #1f1f1f;
     color: #fff;
     // background: linear-gradient(0deg, #fcc505 0%, #da2b15 100%);
     // opacity: 0.8;
   }
   &-black {
-    background: #000;
+    background: #1f1f1f;
     color: #fff;
     &:hover {
-      color: #000;
+      color: #1f1f1f;
       background: #fff;
     }
   }
@@ -47,8 +48,8 @@
   &-order {
     width: 18rem;
     height: 3.8rem;
-    background: #000;
-    border: 2px solid #000;
+    background: #1f1f1f;
+    border: 2px solid #1f1f1f;
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 143%;
@@ -58,7 +59,10 @@
     @include tr;
     &:hover {
       background: #fff;
-      color: #000;
+      color: #1f1f1f;
+    }
+    @media (max-width: $breakpoint-tablet) {
+      width: 100%;
     }
   }
 }

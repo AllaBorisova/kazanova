@@ -6,22 +6,13 @@
 html {
   font-size: 10px;
   scroll-behavior: smooth;
-
-  // @media (max-width: 1520px) {
-  //   font-size: 9px;
-  // }
   @media (max-width: 1440px) {
     font-size: 9px;
   }
   @media (max-width: 1024px) {
     font-size: 8px;
   }
-  // @media (max-width: 1326px) {
-  //   font-size: 7px;
-  // }
-  // @media (max-width: 1160px) {
-  //   font-size: 6px;
-  // }
+
   @media (max-width: $breakpoint-mobile) {
     font-size: 10px;
   }
@@ -112,6 +103,7 @@ textarea {
   @media (max-width: 1440px) {
   }
   @media (max-width: $breakpoint-tablet) {
+    padding: 0 1.5rem;
   }
   @media (max-width: $breakpoint-mobile) {
     padding: 0 1.5rem;
@@ -149,34 +141,34 @@ textarea {
     width: 0 !important;
   }
 }
-.pagination {
-  margin-top: 4rem;
-  max-width: 77rem;
-  margin-left: auto;
-  margin-right: auto;
-  ul {
-    @include ul-clean;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    li {
-      font-size: 1.8rem;
-      font-weight: 500;
-      span {
-        font-weight: 700;
-        color: #000000;
-      }
-      a {
-        color: $color-accent;
-        @include tr;
-        &:hover {
-          color: lighten($color-accent, 15%);
-        }
-      }
-    }
-  }
-}
+// .pagination {
+//   margin-top: 4rem;
+//   max-width: 77rem;
+//   margin-left: auto;
+//   margin-right: auto;
+//   ul {
+//     @include ul-clean;
+//     display: flex;
+//     align-items: center;
+//     flex-wrap: wrap;
+//     gap: 0.8rem;
+//     li {
+//       font-size: 1.8rem;
+//       font-weight: 500;
+//       span {
+//         font-weight: 700;
+//         color: #000000;
+//       }
+//       a {
+//         color: $color-accent;
+//         @include tr;
+//         &:hover {
+//           color: lighten($color-accent, 15%);
+//         }
+//       }
+//     }
+//   }
+// }
 .tabs {
   ul {
     @include ul-clean;
@@ -188,11 +180,9 @@ textarea {
     justify-content: center;
     align-items: center;
     @media (max-width: $breakpoint-tablet) {
-      gap: 1rem;
-      justify-content: flex-start;
     }
     @media (max-width: $breakpoint-mobile) {
-      margin-bottom: 2.5rem;
+      gap: 0.5rem;
     }
 
     &::-webkit-scrollbar {
@@ -209,7 +199,7 @@ textarea {
       font-size: 2rem;
       @include flexcc;
       white-space: nowrap;
-      backdrop-filter: blur(30px);
+      backdrop-filter: blur(3rem);
       background: rgba(0, 0, 0, 0.1);
       color: #fff;
       border: 1px solid #fff;
@@ -217,10 +207,12 @@ textarea {
       &.active,
       &:hover {
         background: #fff;
-
         color: $color-text-dark;
       }
-      @media (max-width: $breakpoint-tablet) {
+      @media (max-width: $breakpoint-mobile) {
+        width: 50%;
+        height: 4rem;
+        font-size: 1.4rem;
       }
     }
   }
@@ -231,13 +223,14 @@ textarea {
     padding-right: 4rem;
     background: #fff;
     @media (max-width: $breakpoint-mobile) {
-      // padding-top: 2.5rem;
+      padding: 3rem;
     }
   }
 }
 .popup {
   background: none;
   max-width: 58rem;
+  display: none;
 }
 .fancybox__backdrop {
   background: none;

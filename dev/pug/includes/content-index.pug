@@ -5,35 +5,31 @@ main.main
 				.swiper-slide
 					.section-main-slider__slide 
 						img(src="./img/top-img.jpg" alt="")
-						.container
-							.section-main-slider__desc 
-								.section-main-slider__title Вдохновлённые весной
-								.section-main-slider__text Комплекты постельного белья
-								a.section-main-slider__button(href="") Купить
+						.section-main-slider__desc 
+							.section-main-slider__title Вдохновлённые весной
+							.section-main-slider__text Комплекты постельного белья
+							a.section-main-slider__button(href="") Купить
 				.swiper-slide
 					.section-main-slider__slide 
 						img(src="./img/top-img.jpg" alt="")
-						.container
-							.section-main-slider__desc 
-								.section-main-slider__title Махровые изделия
-								.section-main-slider__text Махровые изделия
-								a.section-main-slider__button(href="") Купить
+						.section-main-slider__desc 
+							.section-main-slider__title Махровые изделия
+							.section-main-slider__text Махровые изделия
+							a.section-main-slider__button(href="") Купить
 				.swiper-slide
 					.section-main-slider__slide 
 						img(src="./img/top-img.jpg" alt="")
-						.container
-							.section-main-slider__desc 
-								.section-main-slider__title Подушкии одеяла
-								.section-main-slider__text Подушкии одеяла
-								a.section-main-slider__button(href="") Купить
+						.section-main-slider__desc 
+							.section-main-slider__title Подушкии одеяла
+							.section-main-slider__text Подушкии одеяла
+							a.section-main-slider__button(href="") Купить
 				.swiper-slide
 					.section-main-slider__slide 
 						img(src="./img/top-img.jpg" alt="")
-						.container
-							.section-main-slider__desc 
-								.section-main-slider__title Товары дня
-								.section-main-slider__text Товары дня
-								a.section-main-slider__button(href="") Купить
+						.section-main-slider__desc 
+							.section-main-slider__title Товары дня
+							.section-main-slider__text Товары дня
+							a.section-main-slider__button(href="") Купить
 			.swiper-pagination
 		.section-main-thumbs 
 			.section-main-thumbs__prev
@@ -60,8 +56,6 @@ main.main
 							.section-main-thumbs__img 
 								img(src="./img/icon4.png" alt="")
 							.section-main-thumbs__text Товары дня
-				//- .section-main-thumbs__buttons
-					
 			.section-main-thumbs__next 
 				<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">  <path d="M9.79798 14.8226L19.0424 24.067L28.2867 14.8226L27.1314 13.6672L19.0424 21.7563L10.9533 13.6672L9.79798 14.8226Z" fill="white" /></svg>
 		
@@ -149,42 +143,43 @@ main.main
 						a.section-collections__button(href="") Выбрать
 
 	.section-actions
-		.container 
+		.container
 			.section-actions__inner
 				.section-actions__title Акции и скидки
 				a.button.button-black.section-actions__button(href="") Перейти
-	.section-catalog 
-		.container 
+	.section-catalog
+		.container
 			.catalog
 				.catalog__title Хиты продаж
-						.swiper.catalog-slider
-							.swiper-wrapper
-								.swiper-slide
-									+catalog-item('product1.jpg','Аматти (капучино сапфир) (1)')
-								.swiper-slide
-									+catalog-item('product2.jpg','Камила (роза антика) (1)')
-								.swiper-slide
-									+catalog-item('product3.jpg','Касабланка (роза антика) (2)')
-								.swiper-slide
-									+catalog-item('product4.jpg','Касабланка (роза антика) (5)')
-								.swiper-slide
-									+catalog-item('product5.jpg','Касабланка (роза антика) (5)')
-								.swiper-slide
-									+catalog-item('product1.jpg','Аматти (капучино сапфир) (1)')
-								.swiper-slide
-									+catalog-item('product2.jpg','Камила (роза антика) (1)')
-								.swiper-slide
-									+catalog-item('product3.jpg','Касабланка (роза антика) (2)')
-								.swiper-slide
-									+catalog-item('product4.jpg','Касабланка (роза антика) (5)')
-								.swiper-slide
-									+catalog-item('product5.jpg','Касабланка (роза антика) (5)')
-							.catalog-slider__buttons
-								.catalog-slider__prev 
-									<svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20.5947" r="19.5" transform="rotate(180 20 20.5947)" stroke="#1F1F1F" /><path d="M12.767 20.029C12.4546 20.3415 12.4546 20.848 12.767 21.1604L17.8582 26.2516C18.1706 26.564 18.6771 26.564 18.9895 26.2516C19.302 25.9392 19.302 25.4326 18.9895 25.1202L14.4641 20.5947L18.9895 16.0692C19.302 15.7568 19.302 15.2503 18.9895 14.9379C18.6771 14.6255 18.1706 14.6255 17.8582 14.9379L12.767 20.029ZM26.666 19.7947H13.3327V21.3947H26.666V19.7947Z" fill="#1F1F1F" /></svg>
-								.catalog-slider__next 
-									<svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="19.5" transform="matrix(1 0 0 -1 0 40.0908)" stroke="#1F1F1F" /><path d="M27.233 19.5251C27.5454 19.8376 27.5454 20.3441 27.233 20.6565L22.1418 25.7477C21.8294 26.0601 21.3229 26.0601 21.0105 25.7477C20.698 25.4353 20.698 24.9287 21.0105 24.6163L25.5359 20.0908L21.0105 15.5653C20.698 15.2529 20.698 14.7464 21.0105 14.434C21.3229 14.1215 21.8294 14.1215 22.1418 14.434L27.233 19.5251ZM13.334 19.2908H26.6673V20.8908H13.334V19.2908Z" fill="#1F1F1F" /></svg>
-	.section-bonuses 
+				.swiper.catalog-slider
+					.swiper-wrapper
+						.swiper-slide
+							+catalog-item('product1.jpg','Аматти (капучино сапфир) (1)')
+						.swiper-slide
+							+catalog-item('product2.jpg','Камила (роза антика) (1)')
+						.swiper-slide
+							+catalog-item('product3.jpg','Касабланка (роза антика) (2)')
+						.swiper-slide
+							+catalog-item('product4.jpg','Касабланка (роза антика) (5)')
+						.swiper-slide
+							+catalog-item('product5.jpg','Касабланка (роза антика) (5)')
+						//- .swiper-slide
+						//- 	+catalog-item('product1.jpg','Аматти (капучино сапфир) (1)')
+						//- .swiper-slide
+						//- 	+catalog-item('product2.jpg','Камила (роза антика) (1)')
+						//- .swiper-slide
+						//- 	+catalog-item('product3.jpg','Касабланка (роза антика) (2)')
+						//- .swiper-slide
+						//- 	+catalog-item('product4.jpg','Касабланка (роза антика) (5)')
+						//- .swiper-slide
+						//- 	+catalog-item('product5.jpg','Касабланка (роза антика) (5)')
+					.catalog-slider__buttons
+						.catalog-slider__prev 
+							<svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20.5947" r="19.5" transform="rotate(180 20 20.5947)" stroke="#1F1F1F" /><path d="M12.767 20.029C12.4546 20.3415 12.4546 20.848 12.767 21.1604L17.8582 26.2516C18.1706 26.564 18.6771 26.564 18.9895 26.2516C19.302 25.9392 19.302 25.4326 18.9895 25.1202L14.4641 20.5947L18.9895 16.0692C19.302 15.7568 19.302 15.2503 18.9895 14.9379C18.6771 14.6255 18.1706 14.6255 17.8582 14.9379L12.767 20.029ZM26.666 19.7947H13.3327V21.3947H26.666V19.7947Z" fill="#1F1F1F" /></svg>
+						.catalog-slider__next 
+							<svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="19.5" transform="matrix(1 0 0 -1 0 40.0908)" stroke="#1F1F1F" /><path d="M27.233 19.5251C27.5454 19.8376 27.5454 20.3441 27.233 20.6565L22.1418 25.7477C21.8294 26.0601 21.3229 26.0601 21.0105 25.7477C20.698 25.4353 20.698 24.9287 21.0105 24.6163L25.5359 20.0908L21.0105 15.5653C20.698 15.2529 20.698 14.7464 21.0105 14.434C21.3229 14.1215 21.8294 14.1215 22.1418 14.434L27.233 19.5251ZM13.334 19.2908H26.6673V20.8908H13.334V19.2908Z" fill="#1F1F1F" /></svg>
+					.swiper-pagination
+	.section-bonuses
 		.container
 			a.section-bonuses__link(href="")
 				<svg width="87" height="87" viewBox="0 0 87 87" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -208,7 +203,7 @@ main.main
 				a.button.button-black.section-bonuses__button(href="") Получить скидку
 
 	.section-ideas
-		.container 
+		.container
 			.section-ideas__top
 				.section-ideas__top-left
 					.section-ideas__title Идеи для подарков
