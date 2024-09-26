@@ -129,6 +129,9 @@ textarea {
 
 .main {
   flex: 1;
+  &_other {
+    padding-top: 3rem;
+  }
 }
 
 .for-table {
@@ -141,34 +144,52 @@ textarea {
     width: 0 !important;
   }
 }
-// .pagination {
-//   margin-top: 4rem;
-//   max-width: 77rem;
-//   margin-left: auto;
-//   margin-right: auto;
-//   ul {
-//     @include ul-clean;
-//     display: flex;
-//     align-items: center;
-//     flex-wrap: wrap;
-//     gap: 0.8rem;
-//     li {
-//       font-size: 1.8rem;
-//       font-weight: 500;
-//       span {
-//         font-weight: 700;
-//         color: #000000;
-//       }
-//       a {
-//         color: $color-accent;
-//         @include tr;
-//         &:hover {
-//           color: lighten($color-accent, 15%);
-//         }
-//       }
-//     }
-//   }
-// }
+.pagination {
+  margin-top: 1.3rem;
+  // max-width: 77rem;
+  // margin-left: auto;
+  // margin-right: auto;
+  ul {
+    @include ul-clean;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    li {
+      font-weight: 400;
+      font-size: 2.4rem;
+      line-height: 110%;
+      letter-spacing: 0.02em;
+      color: #b5b3b3;
+      span {
+        color: $color-text-dark;
+      }
+      a {
+        @include tr;
+        &:hover {
+          color: $color-text-dark;
+        }
+      }
+      &.prev,
+      &.next {
+        a {
+          display: block;
+          @include wh(4rem);
+          @include flexcc;
+          border-radius: 50%;
+          border: 1px solid $color-text-dark;
+          &:hover {
+            background-color: $color-text-dark;
+            svg path {
+              fill: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 .tabs {
   ul {
     @include ul-clean;
@@ -227,14 +248,7 @@ textarea {
     }
   }
 }
-.popup {
-  background: none;
-  max-width: 58rem;
-  display: none;
-}
-.fancybox__backdrop {
-  background: none;
-}
+
 /*show-hide hover fontawesome*/
 // * > .fa-hover-show,
 // *:hover > .fa-hover-hidden,

@@ -76,7 +76,46 @@ footer.footer
 						.form__block
 							+custom-checkbox-agree('Согласен с политикой обработки персональных данных')
 						button.button.button_full(type="submit") Зарегистрироваться
-
+#card-popup.card-popup 
+	.card-popup__inner 
+		.card-popup__img 
+			.swiper.card-popup-slider
+				.swiper-wrapper
+					.swiper-slide
+						.catalog-item__img-inner
+							img(src='./img/product-big.jpg' alt='')
+					.swiper-slide
+						.catalog-item__img-inner
+							img(src='./img/product-big.jpg' alt='')
+					.swiper-slide
+						.catalog-item__img-inner
+							img(src='./img/product-big.jpg' alt='')
+		.card-popup__desc 
+			.card-popup__name Колибри аметист/графит
+			.card-popup__prices 
+				.card-popup__old-price 15 000 ₽
+				.card-popup__price 10 000 ₽
+			.card-popup__buttons 
+				button.button.button-black Купить
+				button.button Купить в 1 клик
+			.card-popup__params 
+				.card-popup__params-title Характеристики
+				.card-popup__params-block 
+					.card-popup__params-name Размер:
+					.card-popup__params-value Семейный
+				.card-popup__params-block 
+					.card-popup__params-name Комплектация:
+					.card-popup__params-value Пододеяльник: 155х210cм(2шт), Простынь: 230х250см(1шт), Наволочки: 50х70см(2шт), 70х70см(2шт)
+				.card-popup__params-block 
+					.card-popup__params-name Ткань:
+					.card-popup__params-value Сатин/Велюр
+				.card-popup__params-block 
+					.card-popup__params-name Состав:
+					.card-popup__params-value 100% Хлопок - простынь и наволочки 50х70, 50% Хлопок 50% Велюр - пододеяльник и наволочки 70х70
+				.card-popup__params-block 
+					.card-popup__params-name Цвет:
+					.card-popup__params-value фиолетовый/графит
+			a.button.button_full(href="") Смотреть подробнее
 //- #about-popup.white-popup.mfp-hide
 //- 	.popup 
 //- 		.popup__columns

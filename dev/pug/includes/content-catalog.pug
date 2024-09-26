@@ -1,0 +1,77 @@
+﻿main.main.main_other
+	.container 
+		.breadcrumbs 
+			ul 
+				li 
+					a(href="") Главная
+				li 
+					span 
+						<svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">  <path d="M6.34961 3.49988L0.704284 6.75921L0.704285 0.240548L6.34961 3.49988Z" fill="#1F1F1F" /></svg>
+				li 
+					a(href="") Каталог
+				li 
+					span 
+						<svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">  <path d="M6.34961 3.49988L0.704284 6.75921L0.704285 0.240548L6.34961 3.49988Z" fill="#1F1F1F" /></svg>
+				li 
+					span Постельное белье
+		.catalog 
+			.catalog__h1.h1 Постельное белье
+				span.h1__count 36 товаров
+			.catalog__filtr.catalog-filtr
+				.catalog-filtr__inner
+					.catalog-filtr__mobile-title Фильтры
+					.catalog-filtr__block
+						.catalog-filtr__name Сначала популярные 
+							span.filtr-arrow.filtr-arrow-down
+						.catalog-filtr__value
+							a(href="") По возрастанию цены
+							a(href="") По убыванию цены
+					.catalog-filtr__inner.catalog-filtr__mobile-block
+						.catalog-filtr__block
+							.catalog-filtr__name Цена
+								span.filtr-arrow.filtr-arrow-up
+							.catalog-filtr__value
+						.catalog-filtr__block
+							.catalog-filtr__name Наши предложения
+								span.filtr-arrow.filtr-arrow-down
+							.catalog-filtr__value
+						.catalog-filtr__block
+							.catalog-filtr__name Цвет
+								span.filtr-arrow.filtr-arrow-down
+							.catalog-filtr__value
+						.catalog-filtr__block
+							.catalog-filtr__name Размер
+								span.filtr-arrow.filtr-arrow-down
+							.catalog-filtr__value
+						.catalog-filtr__block
+							.catalog-filtr__name Ткань
+								span.filtr-arrow.filtr-arrow-down
+							.catalog-filtr__value
+			.catalog__items 
+				+catalog-item('product1.jpg','Аматти капучино сапфир')
+				+catalog-item('product2.jpg','Камила роза антика')
+				+catalog-item('product3.jpg','Касабланка роза антика')
+				+catalog-item('product4.jpg','Касабланка роза антика')
+				+catalog-item('product1.jpg','Аматти капучино сапфир')
+				+catalog-item('product2.jpg','Камила роза антика')
+				+catalog-item('product3.jpg','Касабланка роза антика')
+				+catalog-item('product4.jpg','Касабланка роза антика')
+				+catalog-item('product1.jpg','Аматти капучино сапфир')
+				+catalog-item('product2.jpg','Камила роза антика')
+				+catalog-item('product3.jpg','Касабланка роза антика')
+				+catalog-item('product4.jpg','Касабланка роза антика')
+			.catalog__more 
+				button.button Загрузить еще
+			.pagination 
+				ul 
+					li.prev 
+						a(href="")
+							<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.766996 6.26244C0.454576 6.57486 0.454576 7.08139 0.766996 7.39381L5.85816 12.485C6.17058 12.7974 6.67712 12.7974 6.98954 12.485C7.30196 12.1726 7.30196 11.666 6.98954 11.3536L2.46405 6.82813L6.98954 2.30264C7.30196 1.99022 7.30196 1.48369 6.98954 1.17127C6.67712 0.858851 6.17058 0.858851 5.85816 1.17127L0.766996 6.26244ZM14.666 6.02812L1.33268 6.02812V7.62813L14.666 7.62813V6.02812Z" fill="#1F1F1F" /></svg>
+					li 
+						span 1
+					li 
+						a(href="") 2
+					li.next
+						a(href="")
+							<svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.233 6.26244C14.5454 6.57486 14.5454 7.08139 14.233 7.39381L9.14183 12.485C8.82941 12.7974 8.32288 12.7974 8.01046 12.485C7.69804 12.1726 7.69804 11.666 8.01046 11.3536L12.5359 6.82812L8.01046 2.30264C7.69804 1.99022 7.69804 1.48369 8.01046 1.17127C8.32288 0.858851 8.82941 0.858851 9.14183 1.17127L14.233 6.26244ZM0.333984 6.02812L13.6673 6.02812V7.62813L0.333984 7.62813L0.333984 6.02812Z" fill="#1F1F1F" /></svg>
+

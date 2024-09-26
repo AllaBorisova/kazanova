@@ -43,6 +43,7 @@ mixin catalog-item(imgsrc, name)
 	.catalog-item 
 		.catalog-item__badge ХИТ
 		a.catalog-item__favorite(href="")
+		button.catalog-item__fast-view(data-fancybox data-src="#card-popup") Быстрый просмотр
 		.swiper.catalog-item__img
 			.swiper-wrapper
 				.swiper-slide
@@ -65,6 +66,7 @@ mixin catalog-item(imgsrc, name)
 					.catalog-item__price от 10 000 ₽
 					.catalog-item__old-price от 15 000 ₽
 				a.button.button-order(href="") Купить
+		
 mixin switch 
 	label.switch
 		input(type="checkbox")

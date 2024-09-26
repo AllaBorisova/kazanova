@@ -1,0 +1,83 @@
+﻿.popup {
+  background: none;
+  max-width: 58rem;
+  display: none;
+}
+.fancybox__backdrop {
+  background: none;
+}
+.card-popup {
+  background: none;
+  display: none;
+  max-width: 121.4rem;
+
+  &__inner {
+    padding: 2rem;
+    padding-bottom: 3rem;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 56.9rem auto;
+    gap: 3.2rem;
+  }
+  &__name {
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 140%;
+    text-transform: uppercase;
+    margin-bottom: 1.8rem;
+    font-family: $font-second;
+  }
+  &__prices {
+    margin-bottom: 2.6rem;
+    gap: 1.9rem;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+  &__old-price {
+    font-family: $font-second;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 100%;
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  &__price {
+    font-family: $font-second;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 62%;
+  }
+  &__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    .button {
+      width: 100%;
+    }
+  }
+  &__params {
+    margin-bottom: 3rem;
+    font-family: $font-third;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 125%;
+    &-title {
+      margin-bottom: 2rem;
+    }
+    &-block {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      gap: 2rem;
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+    &-name {
+      color: #b5b3b3;
+    }
+    &-value {
+    }
+  }
+}

@@ -1,4 +1,4 @@
-var swiperIdeas = new Swiper('.section-ideas-slider', {
+let swiperIdeas = new Swiper('.section-ideas-slider', {
   slidesPerView: 'auto',
   spaceBetween: 50,
   navigation: {
@@ -14,7 +14,7 @@ var swiperIdeas = new Swiper('.section-ideas-slider', {
   },
 });
 
-var swiperYears = new Swiper('.section-years-slider', {
+let swiperYears = new Swiper('.section-years-slider', {
   slidesPerView: 2,
   spaceBetween: 0,
   navigation: {
@@ -34,7 +34,7 @@ var swiperYears = new Swiper('.section-years-slider', {
   },
 });
 
-var swiperCatalog = new Swiper('.catalog-slider', {
+let swiperCatalog = new Swiper('.catalog-slider', {
   slidesPerView: 'auto',
   spaceBetween: 26,
   navigation: {
@@ -49,7 +49,7 @@ var swiperCatalog = new Swiper('.catalog-slider', {
   noSwipingClass: 'swiper-slide',
 });
 
-var swiperCatalogImg = new Swiper('.catalog-item__img', {
+let swiperCatalogImg = new Swiper('.catalog-item__img', {
   slidesPerView: 1,
   spaceBetween: 0,
   pagination: {
@@ -58,7 +58,7 @@ var swiperCatalogImg = new Swiper('.catalog-item__img', {
   },
 });
 
-var swiperThumbsSlider = new Swiper('.section-main-thumbs__slider', {
+let swiperThumbsSlider = new Swiper('.section-main-thumbs__slider', {
   loop: true,
   slidesPerView: 3,
   spaceBetween: 0,
@@ -86,7 +86,21 @@ var swiperThumbsSlider = new Swiper('.section-main-thumbs__slider', {
   },
 });
 
-var swiper2 = new Swiper('.section-main-slider', {
+let swiperCatalogItemPopup = new Swiper('.card-popup-slider', {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.card-popup-slider__next',
+    prevEl: '.card-popup-slider__prev',
+  },
+  // pagination: {
+  //   el: '.swiper-pagination',
+  //   clickable: true,
+  // },
+  // noSwiping: true,
+  // noSwipingClass: 'swiper-slide',
+});
+
+let swiper2 = new Swiper('.section-main-slider', {
   loop: true,
   spaceBetween: 0,
   pagination: {
@@ -161,6 +175,12 @@ jQuery(document).ready(function ($) {
   });
   $('.header-popup__title').click(function () {
     $(this).parent().toggleClass('open-list');
+  });
+  $('.catalog-filtr__name').click(function () {
+    $(this).parent().find('.catalog-filtr__value').toggleClass('show-value');
+  });
+  $('.catalog-filtr__mobile-title').click(function () {
+    $('.catalog-filtr__mobile-block').toggleClass('show-filter');
   });
   // $('.input-file input[type=file]').on('change', function () {
   //   let file = this.files[0];

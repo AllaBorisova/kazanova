@@ -1,0 +1,30 @@
+﻿.h1 {
+  font-weight: 400;
+  font-size: 4.8rem;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  font-family: $font-second;
+  margin: 0;
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2.2rem;
+  flex-wrap: wrap;
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 2rem;
+    line-height: 128%;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  &__count {
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    color: #7d7d7d;
+    font-family: $font-first;
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 1.4rem;
+    }
+  }
+}
