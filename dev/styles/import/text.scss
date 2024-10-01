@@ -28,3 +28,18 @@
     }
   }
 }
+.h2 {
+  margin: 0;
+  font-family: $font-second;
+  font-weight: 400;
+  font-size: 3.8rem;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  margin-bottom: 5rem;
+  @media (max-width: $breakpoint-mobile) {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 128%;
+    margin-bottom: 1rem;
+  }
+}

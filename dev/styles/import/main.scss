@@ -558,6 +558,7 @@
     width: 39.5rem;
     @media (max-width: $breakpoint-tablet) {
       width: 25.3rem;
+      padding: 0.4rem;
     }
 
     &__badge {

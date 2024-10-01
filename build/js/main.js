@@ -45,8 +45,8 @@ let swiperCatalog = new Swiper('.catalog-slider', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  noSwiping: true,
-  noSwipingClass: 'swiper-slide',
+  // noSwiping: true,
+  // noSwipingClass: 'swiper-slide',
 });
 
 let swiperCatalogImg = new Swiper('.catalog-item__img', {
@@ -111,6 +111,35 @@ let swiper2 = new Swiper('.section-main-slider', {
     swiper: swiperThumbsSlider,
   },
 });
+
+//collection slider in product card
+let swiperCollectionCard = new Swiper('.collections-slider', {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.collections-slider__next',
+    prevEl: '.collections-slider__prev',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+    },
+    // desktop >= 767
+    767: {},
+  },
+});
+
+// $('.product-card-collection-slider').slick({
+//   slidesToShow: 4,
+//   slidesToScroll: 1,
+//   dots: false,
+//   arrows: true,
+//   centerMode: false,
+//   focusOnSelect: true,
+//   prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+//   nextArrow: '<button class="slide-arrow next-arrow"></button>',
+// });
 
 Fancybox.bind('[data-fancybox]', {
   // Your custom options
@@ -182,6 +211,10 @@ jQuery(document).ready(function ($) {
   $('.catalog-filtr__mobile-title').click(function () {
     $('.catalog-filtr__mobile-block').toggleClass('show-filter');
   });
+
+  $('.product-card__toggle-title').click(function () {
+    $(this).parent().toggleClass('show-toggle');
+  });
   // $('.input-file input[type=file]').on('change', function () {
   //   let file = this.files[0];
   //   $(this).parent().find('.input-file__result').addClass('active');
@@ -199,4 +232,38 @@ jQuery(document).ready(function ($) {
   //   }
   //   input[0].files = dt.files;
   // }
+  //card slider
+  $('.product-card__slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    prevArrow:
+      '<button class="product-card__slider-for__prev"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="20" transform="matrix(1 0 0 -1 0 40)" fill="white" /><path d="M12.767 20.029C12.4546 20.3415 12.4546 20.848 12.767 21.1604L17.8582 26.2516C18.1706 26.564 18.6771 26.564 18.9895 26.2516C19.302 25.9392 19.302 25.4326 18.9895 25.1202L14.4641 20.5947L18.9895 16.0692C19.302 15.7568 19.302 15.2503 18.9895 14.9379C18.6771 14.6255 18.1706 14.6255 17.8582 14.9379L12.767 20.029ZM26.666 19.7947H13.3327V21.3947H26.666V19.7947Z" fill="#1F1F1F" /></svg></button>',
+    nextArrow:
+      '<button class="product-card__slider-for__next"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="20" transform="matrix(1 0 0 -1 0 40)" fill="white" /><path d="M27.233 19.4343C27.5454 19.7467 27.5454 20.2533 27.233 20.5657L22.1418 25.6569C21.8294 25.9693 21.3229 25.9693 21.0105 25.6569C20.698 25.3444 20.698 24.8379 21.0105 24.5255L25.5359 20L21.0105 15.4745C20.698 15.1621 20.698 14.6556 21.0105 14.3431C21.3229 14.0307 21.8294 14.0307 22.1418 14.3431L27.233 19.4343ZM13.334 19.2H26.6673V20.8H13.334V19.2Z" fill="#1F1F1F" /></svg></button>',
+    asNavFor: '.product-card__slider-nav',
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: false,
+          dots: true,
+        },
+      },
+    ],
+  });
+  $('.product-card__slider-nav').slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    vertical: true,
+    asNavFor: '.product-card__slider-for',
+    dots: false,
+    arrows: false,
+    centerMode: false,
+    focusOnSelect: true,
+  });
 });
