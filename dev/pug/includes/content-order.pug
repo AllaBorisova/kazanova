@@ -1,0 +1,85 @@
+﻿main.main.main_other
+	.container 
+		.breadcrumbs 
+			ul 
+				li 
+					a(href="") Главная
+				li 
+					span 
+						<svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">  <path d="M6.34961 3.49988L0.704284 6.75921L0.704285 0.240548L6.34961 3.49988Z" fill="#1F1F1F" /></svg>
+				li 
+					span Оформление заказа
+		a.go-back(href="") В корзину
+		h1.h1.h1_center Оформление заказа
+		.cart-page 
+			.cart-page__inner
+				.cart-page__left 
+					.order-form 
+						form(action="" method="post")
+							.order-form__block 
+								.order-form__title Покупатель
+								.order-form__grid.order-form__two-columns
+									.form-block 
+										label.form-block__label(for="") Ф.И.О.
+											span.req *
+										input.form-block__input(type="text" value="Александр Лисковас") 
+									.form-block 
+										label.form-block__label(for="") E-Mail
+											span.req *
+										input.form-block__input(type="email" value="al@liskovas.com") 
+									.form-block 
+										label.form-block__label(for="") Телефон
+											span.req *
+										input.form-block__input(type="tel" value="+ 7 (890) 623-95-53") 
+								button.button.button_black() Продолжить
+							.order-form__block 
+								.order-form__title Способ доставки
+								.order-form__grid.order-form__two-columns
+								.order-form__title Выберите адрес доставки
+								.order-form__grid
+									.form-block 
+											label.form-block__label(for="") Адрес доставки
+												span.req *
+											input.form-block__input(type="text" value="") 
+									.form-block 
+											label.form-block__label(for="") Индекс
+												span.req *
+											input.form-block__input(type="text" value="") 
+									.form-block 
+											label.form-block__label(for="") Комментарий к заказу
+												span.req *
+											textarea.form-block__input 
+								button.button.button_black() Продолжить
+							.order-form__block 
+								.order-form__title Способ оплаты
+								.order-form__grid.order-form__two-columns
+
+				.cart-page__right
+					.cart-total 
+						.cart-total__header
+							.cart-total__title Итого:
+							.cart-total__price 5 132 ₽
+						.cart-total__option
+							.cart-total__option-name Товаров на:
+							.cart-total__option-value 4 632 ₽
+						.cart-total__option
+							.cart-total__option-name Общий вес:
+							.cart-total__option-value 3.2 кг
+						.cart-total__option
+							.cart-total__option-name Доставка:
+							.cart-total__option-value 500 ₽
+						.cart-total__option
+							.cart-total__option-name Экономия:
+							.cart-total__option-value.cart-total__option-value_green 1 158 ₽
+						form.cart-total__promo(method="post" action="")
+							input.cart-total__promo-input(type="text" placeholder="Есть промокод?")
+							button.cart-total__promo-button(type="submit") 
+								<svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_706_1191)"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.7 5.70697L11.709 9.69196C11.5182 9.862 11.2696 9.95258 11.0142 9.94507C10.7588 9.93756 10.5159 9.83253 10.3355 9.65159C10.1551 9.47064 10.0507 9.2275 10.0439 8.97205C10.0372 8.7166 10.1284 8.46826 10.299 8.27799L12.576 5.99997H1C0.734784 5.99997 0.480444 5.8946 0.292908 5.70707C0.105371 5.51953 0 5.26519 0 4.99997C0 4.73476 0.105371 4.48042 0.292908 4.29288C0.480444 4.10535 0.734784 3.99997 1 3.99997H12.589L10.289 1.68998C10.1184 1.49971 10.0272 1.25136 10.0339 0.995916C10.0407 0.740468 10.1451 0.497298 10.3255 0.31635C10.5059 0.135402 10.7488 0.0304014 11.0042 0.0228931C11.2596 0.0153849 11.5082 0.105938 11.699 0.275975L15.69 4.29297C15.8788 4.47917 15.9859 4.73273 15.9878 4.9979C15.9897 5.26307 15.8862 5.51812 15.7 5.70697Z" fill="#1F1F1F" /></g><defs><clipPath id="clip0_706_1191"><rect width="16" height="10" fill="white" /></clipPath></defs></svg>
+						.cart-total__option
+							.cart-total__option-name Доставка:
+							.cart-total__option-value Доставка курьером
+						.cart-total__option
+							.cart-total__option-name Оплата:
+							.cart-total__option-value Яндекс.Деньги
+						a.button.button-black.button_full(href="") ОФОРМИТЬ ЗАКАЗ
+					

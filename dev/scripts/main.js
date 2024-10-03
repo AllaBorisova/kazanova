@@ -206,7 +206,18 @@ jQuery(document).ready(function ($) {
     $(this).parent().toggleClass('open-list');
   });
   $('.catalog-filtr__name').click(function () {
-    $(this).parent().find('.catalog-filtr__value').toggleClass('show-value');
+    const value = $(this).parent().find('.catalog-filtr__value');
+    if (value.hasClass('show-value')) {
+      value.toggleClass('show-value');
+      $(this).parent().css('width', 'auto');
+    } else {
+      value.toggleClass('show-value');
+      const width =
+        value.outerWidth() > $(this).outerWidth()
+          ? value.outerWidth()
+          : $(this).outerWidth();
+      $(this).parent().css('width', width);
+    }
   });
   $('.catalog-filtr__mobile-title').click(function () {
     $('.catalog-filtr__mobile-block').toggleClass('show-filter');

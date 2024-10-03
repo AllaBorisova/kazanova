@@ -20,7 +20,7 @@
 			.catalog__filtr.catalog-filtr
 				.catalog-filtr__inner
 					.catalog-filtr__mobile-title Фильтры
-					.catalog-filtr__block
+					.catalog-filtr__block.catalog-filtr__block_full
 						.catalog-filtr__name Сначала популярные 
 							span.filtr-arrow.filtr-arrow-down
 						.catalog-filtr__value
@@ -31,22 +31,37 @@
 							.catalog-filtr__name Цена
 								span.filtr-arrow.filtr-arrow-up
 							.catalog-filtr__value
-						.catalog-filtr__block
+								+custom-checkbox('Дорого')
+								+custom-checkbox('Дешево')
+						.catalog-filtr__block.catalog-filtr__block_full
 							.catalog-filtr__name Наши предложения
 								span.filtr-arrow.filtr-arrow-down
 							.catalog-filtr__value
+								+custom-checkbox('Новинки')
+								+custom-checkbox('Хиты продаж')
 						.catalog-filtr__block
 							.catalog-filtr__name Цвет
 								span.filtr-arrow.filtr-arrow-down
 							.catalog-filtr__value
+								+custom-checkbox('Белый')
+								+custom-checkbox('Серый')
 						.catalog-filtr__block
 							.catalog-filtr__name Размер
 								span.filtr-arrow.filtr-arrow-down
 							.catalog-filtr__value
-						.catalog-filtr__block
+								+custom-checkbox('1.5 спальный')
+								+custom-checkbox('Евро')
+								+custom-checkbox('Семейный')
+						.catalog-filtr__block.catalog-filtr__block_material
 							.catalog-filtr__name Ткань
 								span.filtr-arrow.filtr-arrow-down
 							.catalog-filtr__value
+								+custom-checkbox('Сатин')
+								+custom-checkbox('Хлопок')
+								+custom-checkbox('Хлопок/Вискоза')
+								+custom-checkbox('Тенсель')
+								+custom-checkbox('Сатин/Велюр')
+								+custom-checkbox('Тенсель/Египетский хлопок')
 			.catalog__items 
 				+catalog-item('product1.jpg','Аматти капучино сапфир')
 				+catalog-item('product2.jpg','Камила роза антика')

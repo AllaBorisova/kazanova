@@ -103,10 +103,34 @@
     gap: 1.5rem;
     z-index: 6;
     display: none;
-    a {
+    border: 1px solid $color-text-dark;
+    border-top: 0;
+    margin-top: -1px;
+    width: max-content;
+    // max-width: 195px;
+    .catalog-filtr__block_full & {
+      width: 100%;
+    }
+    .catalog-filtr__block_material & {
+      max-width: 19.5rem;
     }
     &.show-value {
       display: flex;
+    }
+    .custom-checkbox__span {
+      width: 1.2rem;
+      height: 1.2rem;
+      margin-top: 0.3rem;
+    }
+    .custom-checkbox__checkbox:checked + .custom-checkbox__span::before {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+    .custom-checkbox__label {
+      font-family: $font-first;
+    }
+    .custom-checkbox {
+      gap: 1rem;
     }
   }
   &__block {

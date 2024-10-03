@@ -145,9 +145,9 @@ input[type='number'] {
   }
   &__label {
     font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 147%;
-    color: #555;
+    font-size: 1.4rem;
+    font-size: 14px;
+    color: #1f1f1f;
     cursor: pointer;
     font-family: $font-third;
     @media (max-width: $breakpoint-mobile) {
