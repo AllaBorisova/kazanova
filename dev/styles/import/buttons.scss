@@ -65,4 +65,12 @@
       width: 100%;
     }
   }
+  &-delete {
+    background: none;
+    padding: 0;
+    @include tr;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }

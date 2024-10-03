@@ -1,0 +1,311 @@
+﻿.go-back {
+  display: block;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 154%;
+  color: #999;
+  margin-top: -2rem;
+  margin-bottom: 1.4rem;
+}
+.cart-page {
+  margin-bottom: 8rem;
+  @media (max-width: $breakpoint-mobile) {
+    margin-bottom: 4rem;
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: 74.9% 23.5%;
+    gap: 1.6%;
+    @media (max-width: $breakpoint-tablet) {
+      display: block;
+    }
+  }
+
+  &__item {
+    display: grid;
+    gap: 2%;
+    grid-template-columns: 21.5% 30% 12.5rem auto auto auto;
+    padding: 2rem 0;
+    border-bottom: 1px solid #1f1f1f;
+    align-items: flex-start;
+    &:first-child {
+      padding-top: 0rem;
+    }
+    &:last-child {
+      padding-bottom: 2rem;
+      border: none;
+    }
+    @media (max-width: $breakpoint-tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+    }
+  }
+  &__img {
+    aspect-ratio: 297 / 241;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      width: 100%;
+    }
+  }
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @media (max-width: $breakpoint-mobile) {
+      gap: 0.2rem;
+      width: 100%;
+    }
+  }
+  &__name {
+    display: block;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 130%;
+    color: #222;
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+  }
+  &__option {
+    display: flex;
+    gap: 1rem;
+    @media (max-width: $breakpoint-mobile) {
+      justify-content: center;
+    }
+    &-name {
+      color: #999;
+    }
+  }
+  &__price-one {
+    font-size: 1.6rem;
+    line-height: 5.2rem;
+    font-family: $font-third;
+    font-weight: 600;
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+  &__price-all {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    justify-content: center;
+    min-height: 5.2rem;
+    font-family: $font-third;
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: row;
+      order: 5;
+      align-items: center;
+      min-height: auto;
+      gap: 1rem;
+      margin-left: auto;
+    }
+  }
+  &__delete {
+    display: flex;
+    min-height: 5.2rem;
+    align-items: center;
+    justify-content: flex-end;
+    @media (max-width: $breakpoint-mobile) {
+      order: 4;
+    }
+  }
+  &__price-value {
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+    color: #222;
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 1.8rem;
+      order: 3;
+    }
+  }
+  &__price-discount {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 192%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 0.8rem;
+    height: 2.3rem;
+    background: #1f1f1f;
+    display: flex;
+    padding: 0 0.7rem;
+    @media (max-width: $breakpoint-mobile) {
+      order: 2;
+    }
+  }
+  &__old-price {
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 92%;
+    text-decoration: line-through;
+    color: #999;
+  }
+}
+.cart-total {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.7);
+  background: #fff;
+  padding: 2.4rem 2rem;
+  margin-bottom: 2rem;
+  font-family: $font-third;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.3rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 129%;
+    color: #222;
+  }
+  &__bonus {
+    padding: 1.3rem 2rem;
+    background: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    .custom-checkbox {
+      align-items: center;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      padding: 1rem 1.5rem;
+      .custom-checkbox__label {
+        font-size: 1.5rem;
+      }
+    }
+    &-value {
+      font-weight: 500;
+      font-size: 1.8rem;
+      color: #222;
+      white-space: nowrap;
+    }
+  }
+  &__promo {
+    position: relative;
+    margin-bottom: 2rem;
+    &-input {
+      border: 1px solid #000;
+      background: #fff;
+      height: 4rem;
+      padding-left: 2rem;
+      padding-right: 5.6rem;
+      width: 100%;
+      display: block;
+    }
+    &-button {
+      width: 5.6rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      background: none;
+      @include tr;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  &__finish {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2.2rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 129%;
+    color: #222;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 147%;
+    text-align: center;
+    color: #555;
+  }
+  &__sale-text {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 147%;
+    text-align: center;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+}
+.clear-cart {
+  gap: 0.8rem;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  text-align: center;
+  color: #1f1f1f;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.counter {
+  display: flex;
+  background: #f4f4f4;
+  border-radius: 8px;
+
+  &__minus,
+  &__plus {
+    display: flex;
+    align-items: center;
+    height: 5.2rem;
+    color: #979797;
+    cursor: pointer;
+    font-weight: 700;
+    width: 4.4rem;
+    justify-content: center;
+    font-size: 1.6rem;
+    @include tr;
+    &:hover {
+      opacity: 0.5;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      height: 3.6rem;
+      width: 3rem;
+    }
+  }
+  &__quantity {
+    color: #222;
+    height: 5.2rem;
+    padding: 0;
+    border: 0;
+    width: 3rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.6rem;
+    background: none;
+    @media (max-width: $breakpoint-mobile) {
+      height: 3.6rem;
+      font-size: 1.4rem;
+    }
+  }
+}

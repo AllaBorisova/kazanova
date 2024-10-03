@@ -215,6 +215,26 @@ jQuery(document).ready(function ($) {
   $('.product-card__toggle-title').click(function () {
     $(this).parent().toggleClass('show-toggle');
   });
+
+  $('.counter__plus').click(function (e) {
+    fieldName = $(this).parent().find('.counter__quantity');
+    let currentVal = Number(fieldName.val());
+    if (!isNaN(currentVal)) {
+      fieldName.val(currentVal + 1);
+    } else {
+      fieldName.val(0);
+    }
+  });
+
+  $('.counter__minus').click(function (e) {
+    fieldName = $(this).parent().find('.counter__quantity');
+    let currentVal = Number(fieldName.val());
+    if (!isNaN(currentVal) && currentVal > 0) {
+      fieldName.val(currentVal - 1);
+    } else {
+      fieldName.val(0);
+    }
+  });
   // $('.input-file input[type=file]').on('change', function () {
   //   let file = this.files[0];
   //   $(this).parent().find('.input-file__result').addClass('active');
