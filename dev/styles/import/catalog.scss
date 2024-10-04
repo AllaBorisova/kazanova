@@ -108,11 +108,22 @@
     margin-top: -1px;
     width: max-content;
     // max-width: 195px;
+    @media (max-width: $breakpoint-mobile) {
+      width: 100%;
+      position: static;
+      font-size: 14px;
+      .catalog-filtr__block_sort & {
+        position: absolute;
+      }
+    }
     .catalog-filtr__block_full & {
       width: 100%;
     }
     .catalog-filtr__block_material & {
       max-width: 19.5rem;
+      @media (max-width: $breakpoint-mobile) {
+        max-width: 100%;
+      }
     }
     &.show-value {
       display: flex;
@@ -150,7 +161,7 @@
         top: 4rem;
         padding: 1.5rem;
         .catalog-filtr__block {
-          width: 100%;
+          width: 100% !important;
         }
       }
     }
