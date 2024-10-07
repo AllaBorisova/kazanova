@@ -200,6 +200,9 @@
   &__promo {
     position: relative;
     margin-bottom: 2rem;
+    .cart-total__option + & {
+      margin-top: 3rem;
+    }
     &-input {
       border: 1px solid #000;
       background: #fff;
@@ -251,7 +254,22 @@
     line-height: 147%;
     text-align: center;
     color: #555;
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
+  }
+  &__option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    line-height: 187%;
+    color: #555;
+    &-value_green {
+      color: #27ae60;
+    }
+  }
+  .button {
+    margin-top: 3rem;
   }
 }
 .clear-cart {

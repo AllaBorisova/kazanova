@@ -65,7 +65,11 @@ mixin catalog-item(imgsrc, name)
 					.catalog-item__price от 10 000 ₽
 					.catalog-item__old-price от 15 000 ₽
 				a.button.button-order(href="") Купить
-		
+mixin custom-radio(text)
+	label.custom-radio 
+		input.custom-radio__radio(type="radio" name="")
+		span.custom-radio__span
+		span.custom-radio__label= text
 mixin switch 
 	label.switch
 		input(type="checkbox")
