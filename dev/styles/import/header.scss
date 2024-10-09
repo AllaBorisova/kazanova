@@ -32,7 +32,8 @@
       display: block;
       position: absolute;
       background: $color-text-light;
-      .open-menu &, .header_other & {
+      .open-menu &,
+      .header_other & {
         background: $color-text-dark;
       }
       &:nth-child(1) {
@@ -90,7 +91,7 @@
   position: relative;
   z-index: 5;
   border-bottom: 1px solid #fff;
-  background:none;
+  background: none;
   .open-menu & {
     background: #fff;
   }
@@ -110,13 +111,17 @@
     overflow: hidden;
     position: relative;
     z-index: 2;
+    background: $color-text-dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @media (max-width: $breakpoint-mobile) {
       display: none;
     }
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       display: block;
     }
   }
@@ -139,7 +144,8 @@
     @media (max-width: $breakpoint-mobile) {
       display: none;
     }
-    .open-menu &, .header_other & {
+    .open-menu &,
+    .header_other & {
       svg path {
         stroke: #1f1f1f;
       }
@@ -149,7 +155,8 @@
     @media (max-width: $breakpoint-mobile) {
       display: none;
     }
-    .open-menu &, .header_other & {
+    .open-menu &,
+    .header_other & {
       svg path {
         stroke: #1f1f1f;
       }
@@ -167,7 +174,8 @@
     font-family: $font-first;
     text-align: center;
     @include tr;
-    .open-menu &, .header_other & {
+    .open-menu &,
+    .header_other & {
       border: 1px solid #1f1f1f;
       color: #1f1f1f;
       background: #fff;
@@ -270,7 +278,8 @@
           stroke: #1f1f1f;
         }
       }
-      .open-menu &, .header_other & {
+      .open-menu &,
+      .header_other & {
         border-color: #1f1f1f;
         background: #fff;
         svg path {
@@ -372,7 +381,8 @@
       @include wh(4rem);
       cursor: pointer;
       position: relative;
-      .open-menu &, .header_other & {
+      .open-menu &,
+      .header_other & {
         svg path {
           stroke: #1f1f1f;
         }
@@ -497,7 +507,8 @@
       @include flexcc;
       @include wh(4rem);
       cursor: pointer;
-      .open-menu &, .header_other & {
+      .open-menu &,
+      .header_other & {
         svg path {
           stroke: #1f1f1f;
         }
@@ -609,7 +620,8 @@
       @include flexcc;
       @include wh(4rem);
       cursor: pointer;
-      .open-menu &, .header_other & {
+      .open-menu &,
+      .header_other & {
         svg path {
           stroke: #1f1f1f;
         }
@@ -696,7 +708,7 @@
       }
     }
   }
-  &_other{
+  &_other {
     border-bottom: 1px solid $color-text-dark;
     background: #fff;
   }

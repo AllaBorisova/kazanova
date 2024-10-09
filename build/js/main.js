@@ -219,6 +219,9 @@ jQuery(document).ready(function ($) {
       $(this).parent().css('width', width);
     }
   });
+  $('.personal__menu_mobile ').click(function () {
+    $(this).next().toggleClass('show-menu');
+  });
   $('.catalog-filtr__mobile-title').click(function () {
     $('.catalog-filtr__mobile-block').toggleClass('show-filter');
   });

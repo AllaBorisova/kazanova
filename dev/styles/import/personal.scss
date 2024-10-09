@@ -1,0 +1,275 @@
+﻿.personal {
+  &__inner {
+    display: grid;
+    grid-template-columns: 16% auto;
+    gap: 2rem;
+    @media (max-width: $breakpoint-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__menu {
+    position: relative;
+    &_mobile {
+      display: none;
+      @media (max-width: $breakpoint-mobile) {
+        display: flex;
+        border: 0.8px solid #1f1f1f;
+        border-radius: 2px;
+        height: 6rem;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: 1.3rem;
+        line-height: 154%;
+        color: #333;
+        padding: 0 1.6rem;
+      }
+    }
+    ul {
+      @include ul-clean;
+      @media (max-width: $breakpoint-mobile) {
+        display: none;
+        position: absolute;
+        &.show-menu {
+          display: block;
+          z-index: 2;
+          width: 100%;
+        }
+      }
+      li {
+        &:last-child {
+          border-bottom: 0.8px solid #1f1f1f;
+          border-radius: 2px;
+        }
+        a {
+          border-left: 0.8px solid #1f1f1f;
+          border-right: 0.8px solid #1f1f1f;
+          border-top: 0.8px solid #1f1f1f;
+          border-radius: 2px;
+          background: #fff;
+          display: flex;
+          align-items: center;
+          height: 5.2rem;
+          padding: 0 1.5rem;
+          font-size: 13px;
+          color: #333;
+          @include tr;
+          gap: 1rem;
+          &.active,
+          &:hover {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  &-info {
+    &__block {
+      border: 1px solid #000;
+      padding: 2rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 18.7rem;
+      @media (max-width: $breakpoint-mobile) {
+        min-height: auto;
+      }
+    }
+    &__icon {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      @media (max-width: $breakpoint-mobile) {
+        display: none;
+      }
+    }
+    &__subtitle {
+      color: #888;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    &__title {
+      font-size: 1.6rem;
+      color: #333;
+    }
+    &__contacts {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      font-size: 1.6rem;
+      color: #333;
+      @media (max-width: $breakpoint-mobile) {
+        margin-top: 1.6rem;
+      }
+    }
+    &__columns {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      @media (max-width: $breakpoint-mobile) {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      & + .h2 {
+        margin-top: 5rem;
+      }
+      .personal-info__block {
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        font-weight: 500;
+        font-size: 1.7rem;
+        line-height: 113%;
+        color: #333;
+        @media (max-width: $breakpoint-mobile) {
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+  &-orders {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .catalog-filtr__inner {
+      justify-content: flex-start;
+    }
+    .catalog-filtr__value {
+      width: 100%;
+    }
+    @media (max-width: $breakpoint-mobile) {
+      gap: 1rem;
+    }
+    &__items {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+  &-order {
+    display: grid;
+    padding: 2rem 3rem;
+    gap: 1%;
+    display: grid;
+    grid-template-columns: 15% 16% 20% 12% 18% 14%;
+    border: 1px solid #1f1f1f;
+    border-radius: 2px;
+    align-items: center;
+    @media (max-width: $breakpoint-mobile) {
+      padding: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    &__name {
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 130%;
+      color: #222;
+    }
+    &__params {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+    &__number {
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 186%;
+      color: #999;
+    }
+    &__pay {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 125%;
+      color: #34a853;
+    }
+    &__not-pay {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 125%;
+      color: #ff4500;
+    }
+    &__summ {
+      font-weight: 500;
+      font-size: 2.4rem;
+      line-height: 100%;
+      letter-spacing: -0.01em;
+      color: #222;
+    }
+    &__photos {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    &__photo {
+      @include wh(5rem);
+      overflow: hidden;
+      flex: none;
+      img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+    }
+    &__more-photos {
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 150%;
+    }
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      @media (max-width: $breakpoint-mobile) {
+        width: 100%;
+        margin-top: 1rem;
+      }
+      .button {
+        width: 100%;
+      }
+    }
+    &__status_ready {
+      padding-left: 2.2rem;
+      font-weight: 400;
+      font-size: 1.4rem;
+
+      color: #999;
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-image: url('data:image/svg+xml,<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="6.5" cy="6.79004" r="6" stroke="%2334A853" /><path d="M4.5 7.20181L5.75024 8.79004L8.5 5.79004" stroke="%2334A853" stroke-linecap="round" stroke-linejoin="round" /></svg>');
+      background-size: 1.3rem;
+    }
+    &__status_wait {
+      padding-left: 2.2rem;
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-image: url('data:image/svg+xml,<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="6.5" cy="7.21289" r="6" stroke="%23999999" /><path d="M5.5 3.56436C5.5 3.37025 5.65736 3.21289 5.85146 3.21289H7.14854C7.34264 3.21289 7.5 3.37025 7.5 3.56436L7.03279 7.53331C7.00135 7.80035 6.77503 8.00159 6.50615 8.00159C6.23789 8.00159 6.01188 7.80125 5.9797 7.53492L5.5 3.56436ZM6.25457 10.2129C5.87579 10.2129 5.56873 9.90583 5.56873 9.52705C5.56873 9.14827 5.87579 8.8412 6.25457 8.8412H6.7523C7.13108 8.8412 7.43814 9.14827 7.43814 9.52705C7.43814 9.90583 7.13108 10.2129 6.7523 10.2129H6.25457Z" fill="%23999999" /></svg>');
+      background-size: 1.3rem;
+      font-weight: 400;
+      font-size: 1.4rem;
+
+      color: #999;
+      .lines {
+        display: flex;
+        gap: 0.5rem;
+        .line {
+          width: 5rem;
+          height: 1px;
+          background: #d9d9d9;
+          display: block;
+          &.active {
+            background: #222;
+          }
+        }
+      }
+    }
+  }
+}
