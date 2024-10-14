@@ -147,8 +147,58 @@ Fancybox.bind('[data-fancybox]', {
 
 jQuery(document).ready(function ($) {
   //phone mask
-  $('.input-tel').mask('+7 (999) 999-99-99');
+  $('.input-tel').mask('+7 999 999-99-99');
   // $( '.input-code' ).mask( '9999' );
+
+  //форма авторизации первый шаг
+  $('.button-get-code').click(function (e) {
+    e.preventDefault();
+
+    if ($('.login-form__step1 .input-tel').val() === '') {
+      $('.login-form__step1 .input-tel').addClass('form__block-error');
+    } else {
+      $('.login-form__step1 .input-tel').removeClass('form__block-error');
+      $('.login-form__step1').addClass('hide');
+      $('.login-form__step2').addClass('show');
+      //запускаем таймер
+      run();
+    }
+  });
+
+  function run() {
+    $('.form__timer-counter').show();
+    $('.form__timer-text').removeClass('show-link');
+    let i = 10;
+    onTimer();
+    function onTimer() {
+      $('.form__timer-counter span').text(i);
+      i--;
+      if (i < 0) {
+        $('.form__timer-text').addClass('show-link');
+        $('.form__timer-counter').hide();
+      } else {
+        setTimeout(onTimer, 1000);
+      }
+    }
+  }
+
+  //форма авторизации второй шаг
+  $('.button-check-code').click(function (e) {
+    e.preventDefault();
+    if ($('.login-form__step2 .input-code').val() === '') {
+      $('.login-form__step2 .input-code').addClass('form__block-error');
+    } else {
+      alert('Welcome!');
+      $('.login-form__step2 .input-code').removeClass('form__block-error');
+    }
+  });
+
+  //повторный звонок
+  $('.form__timer-text').click(function (e) {
+    e.preventDefault();
+    //запускаем таймер
+    run();
+  });
 
   $('.tabs').lightTabs();
 

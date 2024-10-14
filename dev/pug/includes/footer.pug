@@ -57,14 +57,28 @@ footer.footer
 			li Оптовый покупатель
 		div
 			div 
-				.login-form 
-					.login-form__title Вход в Личный кабинет
-					form.form(action="") 
-						.form__block
-							label.form__label Номер телефона
-							input.form__input.input-tel(type="tel" placeholder="+7")
-							.form__small-text на указанный номер поступит СМС с кодом доступа
-						button.button.button_full(type="submit") Получить код
+				.login-form
+					.login-form__step1
+						.login-form__title Вход в личный кабинет оптового покупателя
+						form.form(action="") 
+							.form__block
+								label.form__label На указанный вами номер поступит звонок. Ответьте на него, и робот продиктует вам Ваш код доступа.
+								input.form__input.input-tel(type="tel" placeholder="+7")
+							button.button.button_full.button-get-code(type="submit") Получить код
+							.form__small-text Нажимая кнопку "получить код", Вы соглашаетесь с политикой конфиденциальности.
+					.login-form__step2.hide
+						.login-form__title Введите код,<br>продиктованный роботом
+						form.form(action="") 
+							.form__block
+								input.form__input.input-code(type="tel" placeholder="Код")
+								.form__error-text Неверный код
+							button.button.button_full.button-check-code(type="submit") Войти
+							.form__small-text Если звонок не поступил в течение двух минут, проверьте правильность введенного номера: и закажите повторный звонок.
+							.form__timer 
+								a.form__timer-text(href="") Заказать повторный звонок
+								.form__timer-counter
+									img(src="./img/timer.svg" alt="")
+									span 120
 			div
 				.login-form 
 					.login-form__title Вход в Личный кабинет оптового покупателя
