@@ -168,7 +168,7 @@ jQuery(document).ready(function ($) {
   function run() {
     $('.form__timer-counter').show();
     $('.form__timer-text').removeClass('show-link');
-    let i = 10;
+    let i = 120;
     onTimer();
     function onTimer() {
       $('.form__timer-counter span').text(i);
