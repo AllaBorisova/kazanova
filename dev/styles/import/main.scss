@@ -260,6 +260,7 @@
     flex-direction: column;
     background-position: right 2rem bottom 2rem;
     height: 13.2rem;
+    cursor: pointer;
     @media (max-width: $breakpoint-tablet) {
       width: 20.8rem;
       flex: none;

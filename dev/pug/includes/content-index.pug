@@ -62,23 +62,38 @@ main.main
 	.section-icons 
 		.container 
 			.section-icons__items 
-				.section-icons__item 
+				.section-icons__item(data-fancybox data-src="#popup-video1")
 					.section-icons__img 
 						img(src="./img/icon5.svg" alt="")
 					.section-icons__name Собственное производство
-				.section-icons__item 
+					#popup-video1.popup-video
+						.popup-video__inner
+							.popup-video__desktop
+								.ratio.ratio-16-9
+									<video controls>
+										<source src="./video/desktop.mp4" type="video/mp4">
+									</video>
+							.popup-video__mobile
+								.ratio.ratio-4-5
+									<video  controls>
+										<source src="./video/mobile.mp4" type="video/mp4">
+									</video>
+							.popup-video__desc 
+								.popup-video__name Собственное производство
+								.popup-video__text В производстве мы применяем самые передовые технологии, и используем только материалы высочайшего качества. Вся наша продукция проходит контроль качества на всех этапах производства. 
+				.section-icons__item(data-fancybox data-src="#popup-video1")
 					.section-icons__img 
 						img(src="./img/icon6.svg" alt="")
 					.section-icons__name Подарочная упаковка
-				.section-icons__item 
+				.section-icons__item(data-fancybox data-src="#popup-video1")
 					.section-icons__img 
 						img(src="./img/icon7.svg" alt="")
 					.section-icons__name Итальянское качество
-				.section-icons__item 
+				.section-icons__item(data-fancybox data-src="#popup-video1")
 					.section-icons__img 
 						img(src="./img/icon8.svg" alt="")
 					.section-icons__name Широкий ассортимент:
-				.section-icons__item 
+				.section-icons__item(data-fancybox data-src="#popup-video1")
 					.section-icons__img 
 						img(src="./img/icon9.svg" alt="")
 					.section-icons__name Доставка по всей России

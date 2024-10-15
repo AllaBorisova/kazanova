@@ -142,7 +142,7 @@ let swiperCollectionCard = new Swiper('.collections-slider', {
 // });
 
 Fancybox.bind('[data-fancybox]', {
-  // Your custom options
+  dragToClose: false,
 });
 
 jQuery(document).ready(function ($) {

@@ -14,7 +14,9 @@ const imagemin = require('gulp-imagemin');
 
 const cleanBuild = () => {
   return gulp
-    .src(['./build/*', '!./build/fonts', '!./build/libs'], { read: false })
+    .src(['./build/*', '!./build/fonts', '!./build/libs', '!./build/video'], {
+      read: false,
+    })
     .pipe(clean());
 };
 
