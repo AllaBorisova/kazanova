@@ -509,8 +509,18 @@
   &-slider__next {
     cursor: pointer;
     @include tr;
+    border-radius: 50%;
+    svg {
+      display: block;
+    }
     &:hover {
-      opacity: 0.7;
+      // opacity: 0.7;
+    }
+    &:hover {
+      background-color: $color-text-dark;
+      svg path {
+        fill: white;
+      }
     }
   }
 
@@ -657,7 +667,8 @@
       @include tr;
       font-family: $font-second;
       &:hover {
-        text-decoration: underline;
+        // text-decoration: underline;
+        opacity: 0.7;
       }
       @media (max-width: $breakpoint-tablet) {
         font-size: 1.4rem;

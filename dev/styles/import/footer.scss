@@ -212,9 +212,10 @@
             text-decoration: none;
             @include tr;
             font-family: $font-third;
-            opacity: 0.9;
+            opacity: 0.7;
             &:hover {
-              text-decoration: underline;
+              // text-decoration: underline;
+              opacity: 1;
             }
           }
         }
