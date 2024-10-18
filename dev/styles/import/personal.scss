@@ -1,14 +1,17 @@
 ﻿.personal {
   &__inner {
     display: grid;
-    grid-template-columns: 16% auto;
+    grid-template-columns: 16% calc(84% - 2rem);
     gap: 2rem;
     @media (max-width: $breakpoint-tablet) {
-      grid-template-columns: 1fr;
+      display: block;
     }
   }
   &__menu {
     position: relative;
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 2rem;
+    }
     &_mobile {
       display: none;
       @media (max-width: $breakpoint-mobile) {
