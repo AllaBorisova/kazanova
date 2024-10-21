@@ -189,6 +189,10 @@ input[type='number'] {
   gap: 2rem;
   align-items: flex-start;
   // margin-bottom: 2.2rem;
+  @include tr;
+  &:hover {
+    opacity: 0.7;
+  }
   @media (max-width: $breakpoint-mobile) {
     gap: 1rem;
   }
@@ -447,6 +451,10 @@ input[type='number'] {
   cursor: pointer;
   color: #222;
   font-size: 1.6rem;
+  @include tr;
+  &:hover {
+    opacity: 0.7;
+  }
   &__radio {
     display: none;
   }

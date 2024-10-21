@@ -142,6 +142,7 @@ let swiperCollectionCard = new Swiper('.collections-slider', {
 // });
 
 Fancybox.bind('[data-fancybox]', {
+  defaultType: 'inline',
   dragToClose: false,
 });
 

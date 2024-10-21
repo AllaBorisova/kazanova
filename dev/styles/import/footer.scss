@@ -68,8 +68,9 @@
     display: block;
     font-family: $font-third;
     @include tr;
+    opacity: 0.7;
     &:hover {
-      text-decoration: underline;
+      opacity: 1;
     }
   }
   &__top {
@@ -120,14 +121,16 @@
       font-weight: 400;
       font-size: 1.4rem;
       line-height: 143%;
-      text-decoration: underline;
-      text-decoration-skip-ink: none;
+      // text-decoration: underline;
+      // text-decoration-skip-ink: none;
       color: #f2f2f2;
       opacity: 0.6;
-      @include tr;
+
       font-family: $font-third;
+      @include tr;
+      opacity: 0.7;
       &:hover {
-        text-decoration: none;
+        opacity: 1;
       }
     }
     @media (max-width: $breakpoint-tablet) {
@@ -210,11 +213,10 @@
 
           a {
             text-decoration: none;
-            @include tr;
             font-family: $font-third;
+            @include tr;
             opacity: 0.7;
             &:hover {
-              // text-decoration: underline;
               opacity: 1;
             }
           }
