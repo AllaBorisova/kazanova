@@ -4,6 +4,7 @@
 }
 .hamburger {
   @include wh(4rem);
+  width:2.1rem;
   @include flexcc;
   flex: none;
   background: none;
@@ -136,7 +137,7 @@
     align-items: center;
     position: relative;
     // justify-content: space-between;
-    gap: 1.5rem;
+    gap: 1rem;
     @media (max-width: $breakpoint-tablet) {
       // justify-content: flex-start;
       gap: 1rem;
@@ -223,7 +224,7 @@
   }
   &-search {
     position: relative;
-    
+    margin-right: 0.5rem;
     @media (max-width: $breakpoint-mobile) {
       order: 5;
       position: static;
@@ -426,6 +427,13 @@
       position: absolute;
       top: -0.4rem;
       right: -0.4rem;
+      top: 0.6rem;
+      right: 0.6rem;
+      .header_other & {
+          border-color: #1f1f1f;
+          color:#1f1f1f;
+          background:#fff;
+      }
     }
     &.active .header-cart__icon {
       background: #fff;
@@ -540,6 +548,7 @@
       @include tr;
       @include flexcc;
       @include wh(4rem);
+      width:3rem;
       cursor: pointer;
       opacity: 1;
       &:hover {
