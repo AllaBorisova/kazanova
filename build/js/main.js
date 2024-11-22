@@ -92,10 +92,10 @@ let swiperCatalogItemPopup = new Swiper('.card-popup-slider', {
     nextEl: '.card-popup-slider__next',
     prevEl: '.card-popup-slider__prev',
   },
-  // pagination: {
-  //   el: '.swiper-pagination',
-  //   clickable: true,
-  // },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
   // noSwiping: true,
   // noSwipingClass: 'swiper-slide',
 });
@@ -141,15 +141,23 @@ let swiperCollectionCard = new Swiper('.collections-slider', {
 //   nextArrow: '<button class="slide-arrow next-arrow"></button>',
 // });
 
-Fancybox.bind('[data-fancybox]', {
+Fancybox.bind('[data-fancybox]', [{
   defaultType: 'inline',
   dragToClose: false,
-});
+  
+}]);
 
 jQuery(document).ready(function ($) {
   //phone mask
   $('.input-tel').mask('+7 999 999-99-99');
   // $( '.input-code' ).mask( '9999' );
+
+
+  $('.catalog-item__fast-view').click( function(){
+    console.log( 'open popup' );
+    Fancybox.show( [ { src: "#card-popup", type: "inline" } ] );
+    swiperCatalogItemPopup.update();
+  })
 
   //форма авторизации первый шаг
   $('.button-get-code').click(function (e) {

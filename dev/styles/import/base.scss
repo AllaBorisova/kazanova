@@ -3,6 +3,10 @@
 *::before {
   box-sizing: border-box;
 }
+.fancybox__container{
+  --fancybox-bg:rgba(31,31,31,0.3);
+}
+
 html {
   font-size: 10px;
   scroll-behavior: smooth;

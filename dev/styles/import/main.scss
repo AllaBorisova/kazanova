@@ -716,6 +716,12 @@
         @media (max-width: $breakpoint-tablet) {
           height: 18rem;
         }
+        .card-popup-slider &{
+          height:50rem;
+          @media (max-width: $breakpoint-tablet) {
+            height: 32rem;
+          }
+        }
         img {
           width: 100%;
           height: 100%;
