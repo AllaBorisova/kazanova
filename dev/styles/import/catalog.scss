@@ -452,7 +452,9 @@
       width: fit-content;
     }
     &__slide {
-      @include wh(27.3rem);
+      // @include wh(27.3rem);
+      width: 100%;
+      aspect-ratio: 1 / 1;
       display: block;
       overflow: hidden;
       img {
