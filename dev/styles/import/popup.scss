@@ -198,3 +198,28 @@
     }
   }
 }
+
+.one-click-popup {
+  background: #fff;
+  width: 67rem;
+  display: none;
+  padding:3rem 4rem;
+  @media (max-width: $breakpoint-mobile) {
+    width:auto;
+    max-width:67rem;
+  }
+  &__title{
+    font-weight: 400;
+    font-size: 3.6rem;
+    line-height: 120%;
+    text-align: center;
+    color: #1f1f1f;
+    margin-bottom: 2rem;
+    font-family: $font-second;
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 2rem;
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+  }
+}

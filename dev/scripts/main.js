@@ -152,6 +152,9 @@ jQuery(document).ready(function ($) {
   $('.input-tel').mask('+7 999 999-99-99');
   // $( '.input-code' ).mask( '9999' );
 
+  $( '.form-info-delivery__name' ).click( function () {
+    $( this ).parent().toggleClass( 'open-info' );
+  })
 
   $('.catalog-item__fast-view').click( function(){
     console.log( 'open popup' );

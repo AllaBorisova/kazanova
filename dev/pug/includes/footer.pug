@@ -140,41 +140,24 @@ footer.footer
 					.card-popup__params-name Цвет:
 					.card-popup__params-value фиолетовый/графит
 			a.button.button_full(href="") Смотреть подробнее
-//- #about-popup.white-popup.mfp-hide
-//- 	.popup 
-//- 		.popup__columns
-//- 			.popup__column-left
-//- 				.popup__logo
-//- 					img(src="./img/popup-logo.png" alt="")
-//- 				.popup__grey-block 100% акций принадлежат Фонду «Жилищное и социальное строительство Калининградской области»
-//- 			.popup__column
-//- 				.popup__title Общество с ограниченной ответственностью Специализированный застройщик «535-СТРОЙ»
-//- 				.popup__text 
-//- 					p С сентября 2003 года Фонд является региональным оператором АО «Агентство по ипотечному жилищному кредитованию» (с 2018г. — ДОМ.РФ). С 2004 года Фонд активно участвует в формировании долгосрочного ипотечного жилищного кредитования в Калининградской области. Свыше 4000 Калининградских семей воспользовались ипотечными продуктами с помощью Фонда «ЖСС КО» и улучшили свои жилищные условия.
-//- 					p Как застройщик Фонд «ЖСС КО» осуществил строительство 17 многоквартирных жилых домов общей жилой площадь более 70 000 кв.м. в Калининграде и городах области: Гурьевске, Светлогорске, Балтийске, Пионерском, Мамоново, Светлом, Гвардейске, Правдинске. Кроме того, по поручению Правительства Калининградской области Фонд в период с 2009 занимается реализацией регионального механизма поддержки застройщиков, завершению строительства объектов, признанных проблемными, и решению вопросов по обеспечению жильём обманутых дольщиков, выполняя функции инвестора и технического заказчика.
-//- #order-popup.white-popup.mfp-hide
-	.popup 
-		.popup__title Заказать
-		.popup__text Наш специалист свяжется с вами в ближайшее время.
-		.popup__form
+
+#one-click-popup.one-click-popup
+		.one-click-popup__title Купить в 1 клик
+		.one-click-popup__form
 			form.form
-				.form__input-block
-					input.form__input(type="text" value="" name="")
-					label.form__label ФИО *
-				.form__input-block
-					input.form__input(type="tel" value="" name="")
-					label.form__label Телефон *
-				.form__input-block
-					input.form__input(type="email" value="" name="")
-					label.form__label Email *
-				.form__input-block
-					input.form__input(type="text" value="" name="")
-					label.form__label “Телятина и баранина» кусочки мяса в соусе”
-				.form__textarea-block
-					textarea.form__textarea
-					label.form__label Комментарий
-				.form__agree
-					+custom-checkbox-agree('Я прочитал и принимаю условия Политики конфиденциальности и Правил обработки персональных данных')
-				button.button.button_full.form__submit.open-popup-link(type="submit" data-mfp-src="#thanks-popup") ЗАКАЗАТЬ
+				.form__block
+					input.form__input(type="text" value="" name="" placeholder="ФИО *")
+				.form__block
+					input.form__input(type="tel" value="" name="" placeholder="Телефон *")
+				.form__block
+					input.form__input(type="email" value="" name="" placeholder="Email *")
+				.form__block
+					textarea.form__textarea(placeholder="Комментарий к заказу")
+				.form__block
+					+custom-checkbox-agree('Согласен с политикой обработки персональных данных')
+				.form__block.form-info-delivery
+					.form-info-delivery__name Стоимость доставки
+					.form-info-delivery__text текст про стоимость доставки текст про стоимость доставки текст про стоимость доставки
+				button.button.button_full(type="submit")  Отправить
 
 
