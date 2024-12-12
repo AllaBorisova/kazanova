@@ -23,7 +23,7 @@
 		border-radius: 2px;
 		height:33px;
 		align-items:center;
-		padding:0 16px;
+		padding:0 13px;
 		width:auto;
 		.custom-radio__span{
 			display:none;
@@ -41,4 +41,15 @@
 	display:flex;
 	flex-wrap:wrap;
 	gap:5px;
+}
+.form-block__flex{
+	display:flex;
+	gap:6px;
+	align-items:center;
+	input{
+		flex:1
+	}
+}
+.form-block__input_right{
+	text-align:right;
 }
