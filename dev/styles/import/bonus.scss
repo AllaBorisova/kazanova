@@ -1,0 +1,44 @@
+﻿.order-form__block_bonus{
+	margin-bottom: 0;
+	border-radius:2px 2px 0 0;
+	border-bottom:none;
+}
+.personal__bonus-text{
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 208%;
+	text-transform: uppercase;
+	color: #888;
+	margin-bottom: 8px;
+}
+.personal__bonus-value{
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 111%;
+	color: #333;
+}
+.custom-radio {
+	&.custom-radio_fix{
+		border: 1px solid #333;
+		border-radius: 2px;
+		height:33px;
+		align-items:center;
+		padding:0 16px;
+		width:auto;
+		.custom-radio__span{
+			display:none;
+		}
+		.custom-radio__label{
+			color: #4d8147;
+			font-size: 13px;
+		}
+		.custom-radio__radio:checked + .custom-radio__label{
+			font-weight:bold;
+		}
+	}
+}
+.fix-pays{
+	display:flex;
+	flex-wrap:wrap;
+	gap:5px;
+}
