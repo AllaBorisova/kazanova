@@ -240,26 +240,38 @@ jQuery(document).ready(function ($) {
   //   $('.hamburger').toggleClass('is-active');
   //   $('body').toggleClass('open-menu');
   // });
+  $(document).on("mouseenter", ".header-cart, .header-phone, .header-pin", function (e) {
+    if(!$(this).hasClass("active")){
+    $(this).addClass("active");
+  }
+});
 
-  $('.header-phone, .header-pin, .header-cart').click(function () {
-    $(this).addClass('active');
-  });
+$(document).on("mouseleave", ".header-cart, .header-phone, .header-pin", function (e) {
+      console.log(e.target, e.relatedTarget);
+    if($(this).hasClass("active")){
+    $(this).removeClass("active");
+  }
+});
 
-  $('body').on('click', function (e) {
-    if ($(e.target).closest('.header-phone').length == 0) {
-      $('.header-phone').removeClass('active');
-    }
-    if ($(e.target).closest('.header-pin').length == 0) {
-      $('.header-pin').removeClass('active');
-    }
-    if ($(e.target).closest('.header-cart').length == 0) {
-      $('.header-cart').removeClass('active');
-    }
-    if ($(e.target).closest('.header-search').length == 0) {
-      $('.header-search').removeClass('search-active');
-      $('.header-search').removeClass('show-results');
-    }
-  });
+  // $('.header-phone, .header-pin, .header-cart').click(function () {
+  //   $(this).addClass('active');
+  // });
+
+  // $('body').on('click', function (e) {
+  //   if ($(e.target).closest('.header-phone').length == 0) {
+  //     $('.header-phone').removeClass('active');
+  //   }
+  //   if ($(e.target).closest('.header-pin').length == 0) {
+  //     $('.header-pin').removeClass('active');
+  //   }
+  //   if ($(e.target).closest('.header-cart').length == 0) {
+  //     $('.header-cart').removeClass('active');
+  //   }
+  //   if ($(e.target).closest('.header-search').length == 0) {
+  //     $('.header-search').removeClass('search-active');
+  //     $('.header-search').removeClass('show-results');
+  //   }
+  // });
 
   $('.footer-menu__caption').click(function () {
     $(this).parent().toggleClass('open-list');

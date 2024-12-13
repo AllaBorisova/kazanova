@@ -576,7 +576,7 @@
         }
       }
     }
-    &__block {
+    &__inner {
       position: absolute;
       background: #fff;
       width: 39.4rem;
@@ -587,7 +587,7 @@
       font-family: $font-first;
       // display: none;
       left: -1.4rem;
-      top: 6.6rem;
+      // top: 6.6rem;
       @media (max-width: $breakpoint-mobile) {
         left: auto;
         right: -1.5rem;

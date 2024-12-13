@@ -1,0 +1,133 @@
+﻿.search-page{
+	.h1{
+		margin-bottom: 20px;
+	}
+	&__center{
+		max-width:800px;
+		margin:0 auto;
+	}
+	&-form{
+		margin-bottom: 20px;
+		form{
+			position: relative;
+		}
+		&__input{
+			width:100%;
+			font-size: 14px;
+			height:40px;
+			padding-left:15px;
+			padding-right: 55px;
+			border: 1px solid #1f1f1f;
+			border-radius: 68px;
+		}
+		&__button{
+			width:40px;
+			height:40px;
+			background:none;
+			background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="%231F1F1F" stroke-linecap="round" stroke-linejoin="round" /><path d="M17.4974 17.4998L13.9141 13.9165" stroke="%231F1F1F" stroke-linecap="round" stroke-linejoin="round" /></svg>');
+			background-position: center;
+			background-repeat: no-repeat;
+			position: absolute;
+			right: 0;
+			top:0;
+			border:none;
+		}
+	}
+	&__middle{
+		margin-top: 40px;
+		display:flex;
+		justify-content: space-between;
+		align-items:center;
+		margin-bottom: 20px;
+		gap:20px;
+		.custom-checkbox__label{
+			white-space: nowrap;
+		}
+	}
+	&__results{
+		.catalog-item__favorite{
+			position: static;
+		}
+	}
+}
+.catalog-horizontal-item{
+	padding:30px 0;
+	border-bottom:1px solid #1f1f1f;
+	display:flex;
+	align-items:center;
+	gap:30px;
+	@media (max-width: $breakpoint-mobile) {
+		gap:15px;
+	}
+	&:first-child{
+		border-top:1px solid #1f1f1f;
+	}
+	&__info{
+		display:flex;
+		align-items:center;
+		gap:30px;
+		@media (max-width: $breakpoint-mobile) {
+			flex-direction: column;
+			gap:15px;
+		}
+	}
+	.custom-checkbox{
+		gap:0;
+	}
+	&__favorite{
+		margin-left: auto;
+	}
+	&__img{
+		flex:none;
+	}
+	&__img-link{
+		width:150px;
+		height:122px;
+		overflow: hidden;
+		display:block;
+		@include tr;
+		@media (max-width: $breakpoint-mobile) {
+			width:auto;
+			height:auto;
+			aspect-ratio: 16 / 9;
+		}
+		img{
+			display:block;
+			height:100%;
+			width:100%;
+			object-fit: cover;
+		}
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+	&__description{
+		display:flex;
+		flex-direction: column;
+		gap:10px;
+	}
+	&__name{
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 130%;
+		color: #222;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	&__availible{
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 125%;
+		color: #34a853;
+		font-family: $font-third;
+	}
+}
+.catalog-item__favorite_dark{
+	background-image: url('data:image/svg+xml,<svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.3125C12 21.3125 0.28125 14.75 0.28125 6.78126C0.281489 5.37282 0.769515 4.00794 1.66236 2.91866C2.5552 1.82938 3.79774 1.08295 5.17874 0.806268C6.55973 0.529587 7.99393 0.739735 9.23749 1.40099C10.481 2.06224 11.4572 3.13377 12 4.43341L12 4.43342C12.5428 3.13378 13.5189 2.06224 14.7625 1.40099C16.0061 0.739738 17.4403 0.529588 18.8213 0.806268C20.2023 1.08295 21.4448 1.82938 22.3376 2.91866C23.2305 4.00794 23.7185 5.37282 23.7188 6.78126C23.7188 14.75 12 21.3125 12 21.3125Z" stroke="%23222222" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" /></svg>');
+	background-color: transparent;
+	&:hover,
+  &.active{
+		background-image: url('data:image/svg+xml,<svg width="24" height="22" viewBox="0 0 24 22" fill="%23222222" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.3125C12 21.3125 0.28125 14.75 0.28125 6.78126C0.281489 5.37282 0.769515 4.00794 1.66236 2.91866C2.5552 1.82938 3.79774 1.08295 5.17874 0.806268C6.55973 0.529587 7.99393 0.739735 9.23749 1.40099C10.481 2.06224 11.4572 3.13377 12 4.43341L12 4.43342C12.5428 3.13378 13.5189 2.06224 14.7625 1.40099C16.0061 0.739738 17.4403 0.529588 18.8213 0.806268C20.2023 1.08295 21.4448 1.82938 22.3376 2.91866C23.2305 4.00794 23.7185 5.37282 23.7188 6.78126C23.7188 14.75 12 21.3125 12 21.3125Z" stroke="%23222222" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" /></svg>');
+	}
+}
